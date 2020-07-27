@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PERSIS" Class="LtsHrgaEnhanceDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BRCGSQCO401;Initial Catalog=PERSIS;Persist Security Info=True;User ID=it_appl_brcg" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PERSISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblSutu" Member="tblSutus">
+    <Type Name="tblSutu">
+      <Column Name="NomorST" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nrp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tglST" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Tujuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Keperluan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Penginapan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Hari" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Awal" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Akhir" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Transport" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="C_Lapangan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_Tahunan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_Besar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_Perjalanan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_Kompensasi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="C_Lain2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PeriodeTugas" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tiket" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Hotel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UPD" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JP3U" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Taxi_Bus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="B_Lain2" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Uang_Muka" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CutiKhusus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AlamatCuti" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SisaCuti1" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SisaCuti2" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SisaCuti3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SisaCuti_Tahunan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SisaCuti_Besar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PersetujuanAtasan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NrpAtasan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TglPersetujuan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Catatan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HR_Officer" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="VerifikasiHR" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TglVerifikasi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PersetujuanHr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HRGA_Head" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TglValidasi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CatatanHrga" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PersetujuanHrga" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProjectManager" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TglPersetujuanPM" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CatatanPM" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PersetujuanPm" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DibuatOleh" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NOINDUKSI" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="printcount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Kategori" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PeriodeBKM" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BKM" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Extend" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Potong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lumsum" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblKaryawan" Member="tblKaryawans">
+    <Type Name="tblKaryawan">
+      <Column Name="Nrp" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TempatLahir" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TglLahir" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JenisKelamin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GolonganDarah" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="StatusKawin" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Agama" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Pendidikan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AlamatTinggal" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Jamsostek" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DPA" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="TglMasukPama" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TglPensiun" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Golongan" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="TglPromosi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDJabatan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Jabatan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="TglMutasi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StatusKeluarga" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="StatusBawaKeluarga" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TglBawaKeluarga" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Departemen" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StatusPenerimaan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Gaji" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RateUlap" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Telepon" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Lokasi" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Approve" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SisaCutiPeriode1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SisaCutiPeriode2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SisaCutiBesar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OnSite" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Rekening" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="PemilikRekening" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KodeBank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StatusPekerjaan" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RewardSarana" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Harike7" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="RosterCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SisaUangObat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TglUpdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="updateby" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="KTP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NPWP" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TeleponWA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TanggalUpdateHarike7" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JenisOperator" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="No_Kamar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status_Mess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Keterangan_Mess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_M_PROFILE" Member="VW_M_PROFILEs">
+    <Type Name="VW_M_PROFILE">
+      <Column Name="PID_MAPPING_PROFILE" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USERID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_PROFILE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

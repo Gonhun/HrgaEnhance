@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.5" name="LtsAbsen">
+  <DataContextMoniker Name="/LtsAbsenDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2e813d17-a97d-40df-8f3c-34a507e6813b" absoluteBounds="0.75, 0.75, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/LtsAbsenDataContext/lembarkerja" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a70bdce-1507-4b19-a60e-bc38c833634c" absoluteBounds="0.765, 1.21, 1.9700000000000002, 7.941446940104167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f2fc285-9e77-488b-8d27-5fa0763c3d48" absoluteBounds="3.75, 0.75, 2, 8.5014469401041666">
+      <DataClassMoniker Name="/LtsAbsenDataContext/lembarkerja_temp_new" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a77666f6-8696-4abc-aec6-03c791b17a76" absoluteBounds="3.765, 1.21, 1.9700000000000002, 7.941446940104167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="994089ea-4d5c-45c8-be7a-93c200d33c85" absoluteBounds="6.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LtsAbsenDataContext/AbsentCode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab5e2c35-9501-4d1a-bca7-e43ff00a9b5a" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ca64d8f-23d1-41a1-88c7-28a2ef709f1e" absoluteBounds="6.75, 2.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LtsAbsenDataContext/VW_M_INJEK_DEPT_ALL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f342c12-fae1-4132-a25c-35d03f631548" absoluteBounds="6.765, 3.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17b5710f-3891-4ac1-a8f7-ce08cd8796ce" absoluteBounds="6.75, 6.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/LtsAbsenDataContext/tblinjekdept1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a08b92c-0f42-44c1-ad38-e4f78f58947e" absoluteBounds="6.765, 7.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4699529f-b938-45bd-bafd-cfa6b9bf1254" absoluteBounds="9.75, 0.75, 2, 8.1168440755208326">
+      <DataClassMoniker Name="/LtsAbsenDataContext/lembarkerja_BACKUP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa3c938c-6e8d-4712-a8ae-fe7122276991" absoluteBounds="9.765, 1.21, 1.9700000000000002, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

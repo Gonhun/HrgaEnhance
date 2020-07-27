@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15.625" name="LtsShare">
+  <DataContextMoniker Name="/LtsShareDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5066dc71-d95f-4f87-998e-86f6fe76eeeb" absoluteBounds="0.5, 0.5, 2, 14.847394205729165">
+      <DataClassMoniker Name="/LtsShareDataContext/VW_R_EMPLOYEE_SHARE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1242a5e-cc7c-4509-b95d-cf9f030e872c" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 14.287394205729166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

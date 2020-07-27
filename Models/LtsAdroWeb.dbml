@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ADRO_WEB" Class="LtsAdroWebDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BRCGSQCO401;Initial Catalog=ADRO_WEB;Persist Security Info=True;User ID=it_appl_brcg" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ADRO_WEBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblLogin" Member="tblLogins">
+    <Type Name="tblLogin">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="access" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sect" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lokasi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastupdate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

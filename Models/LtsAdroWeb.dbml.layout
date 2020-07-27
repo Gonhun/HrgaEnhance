@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LtsAdroWeb">
+  <DataContextMoniker Name="/LtsAdroWebDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c50efab0-8bad-4a04-8683-da37ab9c1d17" absoluteBounds="0.5, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LtsAdroWebDataContext/tblLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="260d1491-8fb5-4090-b71f-6810d90bd0d9" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

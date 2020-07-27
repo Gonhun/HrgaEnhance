@@ -1,0 +1,412 @@
+﻿
+@{
+    ViewBag.Title = "Karyawan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<h2>Master Karyawan</h2>
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="row clearfix">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="body">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div id="gridKaryawan" style="width: 100%; font-size:small;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="header">
+                <h2>Input Data Karyawan</h2>
+            </div>
+            <div class="body">
+                <div class="demo-masked-input">
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Nrp</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputNrp" onchange="loadDataEllipse()" placeholder="isi Nrp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Nama</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputNama" placeholder="isi Nama">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Tempat Lahir</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputTempatLahir" placeholder="isi Tempat Lahir">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Tgl Lahir</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTempatLahir" placeholder="isi Tanggal Lahir">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Jenis Kelamin</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputJnsKelamin" placeholder="isi Jns Kelamin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Gol Darah</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputGolDarah" placeholder="isi Gol Darah">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Status Kawin</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputStatusKawin" placeholder="isi Status Kawin">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Agama</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputAgama" placeholder="isi Agama">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Pendidikan</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputPendidikan" placeholder="isi Pendidikan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Alamat Tinggal</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputAlamatTinggal" placeholder="isi Alamat Tinggal">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Jamsostek</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputJamsostek" placeholder="isi Jamsostek">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>DPA</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputDpa" placeholder="isi DPA">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Tgl Masuk Pama</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTglMasukPama" placeholder="isi Tgl Masuk Pama">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Tgl Pensiun</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTglPensiun" placeholder="isi Tgl Pensiun">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Tgl Promosi</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTglPromosi" placeholder="isi Tgl Promosi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Golongan</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputGolongan" placeholder="isi Golongan">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>IDJabatan</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputIDJabatan" placeholder="isi jabatan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Tgl Mutasi</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTglMutasi" placeholder="isi tgl mutasi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Status Keluarga</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputStatusKeluarga" placeholder="isi status keluarga">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Status Bawa Keluarga</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control" id="inputStatusBawaKeluarga" placeholder="isi status bawa keluarga">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Tgl Bawa Keluarga</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control date" id="inputTglBawaKeluarga" placeholder="isi tgl bawa keluarga">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="TglBawaKeluarga" class="col-sm-2 control-label text-right">Tgl Bawa Keluarga</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputTglBawaKeluarga" placeholder="Tgl Bawa Keluarga (yyyy-MM-dd)">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Departemen" class="col-sm-2 control-label text-right">Departemen</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputDepartemen" placeholder="Departemen">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="StatusPenerimaan" class="col-sm-2 control-label text-right">Status Penerimaan</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputStatusPenerimaan" placeholder="Status Penerimaan">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="POH" class="col-sm-2 control-label text-right">POH</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputPOH" placeholder="POH">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Gaji" class="col-sm-2 control-label text-right">Gaji</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputGaji" placeholder="Gaji">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="RateUlap" class="col-sm-2 control-label text-right">Rate Ulap</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputRateUlap" placeholder="Rate Ulap">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Telepon" class="col-sm-2 control-label text-right">Telepon</label>
+        <div class="col-sm-4">
+            <input type="tel" class="k-textbox form-control" id="inputTelepon" placeholder="Telepon">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Lokasi" class="col-sm-2 control-label text-right">Lokasi</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputLokasi" placeholder="Lokasi">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OnSite" class="col-sm-2 control-label text-right">OnSite</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputOnSite" placeholder="OnSite">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Rekening" class="col-sm-2 control-label text-right">Rekening</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputRekening" placeholder="Rekening">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PemilikRekening" class="col-sm-2 control-label text-right">)Pemilik Rekening</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputPemilikRekening" placeholder="Pemilik Rekening">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">Kode Bank</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputKodeBank" placeholder="Kode Bank">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">Status Pekerjaan</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputStatusPekerjaan" placeholder="Status Pekerjaan">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">Company</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputCompany" placeholder="Company" value="PAMA" disabled>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">Hari ke 7</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputHariKe7" placeholder="Hari ke 7">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">KTP</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputKTP" placeholder="No Ktp">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">NPWP</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputNPWP" placeholder="No NPWP">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">EMAIL</label>
+        <div class="col-sm-4">
+            <input type="email" class="k-textbox form-control" id="inputEmail" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="KodeBank" class="col-sm-2 control-label text-right">Telepon WA</label>
+        <div class="col-sm-4">
+            <input type="text" class="k-textbox form-control" id="inputTelpWa" placeholder="Telepon WA">
+        </div>
+    </div>
+</div>
+
+<script src="~/Js/hrga.master.karyawan.js"></script>
+
+@*<script type="text/javascript" charset="utf-8">
+
+        $("#sheetKaryawan").kendoSpreadsheet();
+
+        var spreadsheet = $("#sheetKaryawan").data("kendoSpreadsheet"); // The widget instance.
+
+        var sheet = spreadsheet.activeSheet(); // The current active sheet.
+
+        var range = sheet.range("A1:B2"); // A 2x2 cell range.
+
+        range.value("foo").color("green");
+    </script>*@

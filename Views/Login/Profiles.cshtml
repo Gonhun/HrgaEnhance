@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="~/Content/node-waves/waves.css" rel="stylesheet" />
+    <link href="~/Content/animate-css/animate.min.css" rel="stylesheet" />
+
+    <link href="~/Content/AdminBSB/materialize.css" rel="stylesheet" />
+    <link href="~/Content/AdminBSB/style.css" rel="stylesheet" />
+    <link href="~/Content/AdminBSB/Color/theme-light-blue.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <script src="~/Scripts/Kendo/kendo.all.min.js"></script>
+
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);"><b>HRGA</b></a>
+            @*<small>Admin BootStrap Based - Material Design</small>*@
+        </div>
+        <div class="card">
+            <div class="body">
+                <input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+                <form id="sign_in" method="POST" action="@ViewBag.pathParent/Login/Authenticate">
+                    <div class="msg">Sign in to start your session</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="userid" placeholder="Username" value="@Session["NRP"]">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-record"></i>
+                        </span>
+                        <div class="form-line">
+                            @Html.DropDownList("idProfile", (IEnumerable<SelectListItem>)ViewBag.Profile, "[Select]", new { onchange = "profileChange(this)", @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <!-- <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+                <label for="rememberme">Remember Me</label> -->
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" id="btnSubmit" type="submit" disabled="disabled">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Content/node-waves/waves.js"></script>
+
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/pages/examples/sign-in.js"></script>
+
+    <script type="text/javascript">
+        function profileChange(e) {
+            var idProfil = $(e).val();
+            var param = "";
+            param += "sProfile=" + idProfil;
+            console.log(idProfil)
+            if (idProfil != null || idProfil != '' || idProfil != "[Select]") {
+                $("#btnSubmit").attr("disabled", false);
+            }
+            else {
+                $("#btnSubmit").attr("disabled", true);
+            }
+        }
+    </script>
+</body>
+</html>

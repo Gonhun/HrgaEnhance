@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+    Layout = null;
+    ViewBag.title = "Login";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <title>@ViewBag.title</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <link href="~/Content/node-waves/waves.css" rel="stylesheet" />
+    <link href="~/Content/animate-css/animate.min.css" rel="stylesheet" />
+
+    <link href="~/Content/AdminBSB/materialize.css" rel="stylesheet" />
+
+    <link href="~/Content/AdminBSB/Color/theme-light-blue.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminBSB/style.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.12.4.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <script src="~/Scripts/Kendo/kendo.all.min.js"></script>
+
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+</head>
+<body class="login-page">
+    <div class="login-box">
+        <div class="logo">
+            <a href="javascript:void(0);"><b>HRGA</b></a>
+            @if (TempData["notice"] != null)
+            {
+                <div class="alert bg-red alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Perhatian! </strong> @TempData["notice"]
+                </div>
+            }
+            @*<small>Admin BootStrap Based - Material Design</small>*@
+        </div>
+        <div class="card">
+            <div class="body">
+                <input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+                <form id="sign_in" method="POST" action="@ViewBag.pathParent/Login/getUser">
+                    <div class="msg">Silahkan login.</div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="userid" placeholder="Username" required autofocus>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8 p-t-5">
+                            <!-- <input type="checkbox" name="rememberme" id="rememberme" class="filled-in chk-col-pink">
+                            <label for="rememberme">Remember Me</label> -->
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Content/node-waves/waves.js"></script>
+
+    <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/pages/examples/sign-in.js"></script>
+</body>
+</html>

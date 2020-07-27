@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13" name="LtsHrgaEnhance">
+  <DataContextMoniker Name="/LtsHrgaEnhanceDataContext" />
+  <nestedChildShapes>
+    <classShape Id="439f96e9-eb23-4850-a126-8fa28f2df2bc" absoluteBounds="0.75, 0.75, 2, 11.962872721354165">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/tblSutu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51c287fd-ab6a-4ce8-9a2d-5391b98dd263" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 11.402872721354166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a6a2bb47-0930-441f-8ff7-6db6700d6646" absoluteBounds="3.75, 0.75, 2, 11.385968424479165">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/tblKaryawan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdab35fa-f7a3-4f15-be87-a2f1978e6819" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 10.825968424479166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c3a08f1-bb2b-4d4b-ba49-12418b3e6fdb" absoluteBounds="6.75, 0.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_M_PROFILE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="211175e2-081e-489e-a724-3cc49750d207" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

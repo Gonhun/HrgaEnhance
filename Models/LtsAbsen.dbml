@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DATA_ABS1" Class="LtsAbsenDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BRCGSQCO401;Initial Catalog=DATA_ABS1;Persist Security Info=True;User ID=it_appl_brcg" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DATA_ABS1ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lembarkerja" Member="lembarkerjas">
+    <Type Name="lembarkerja">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nrp" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[cn unit]" Member="cn_unit" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Alat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jkp_opr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="rest_time" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Absent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PemotongUlap" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TingkatSP" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="jk1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RosterCode" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NoMesin1" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="NoMesin2" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Terlambat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SKL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InputBY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TGLINPUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IpoUpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alat_follow_up" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Follow_Up" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Progress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Problem" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="alat_approve_status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ket_Lembur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_Atasan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Aprove_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprove_HC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Aprove_HC_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_HC_tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tindakan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tgl_Tindakan" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lembarkerja_temp_new" Member="lembarkerja_temp_news">
+    <Type Name="lembarkerja_temp_new">
+      <Column Name="SESSION_UPLOAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nrp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[cn unit]" Member="cn_unit" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Alat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jk" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jkp_opr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rest_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Absent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PemotongUlap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TingkatSP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="out" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jk1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RosterCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoMesin1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NoMesin2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Terlambat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SKL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SKL2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SKL3" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SKL1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InputBY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TGLINPUT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IpoUpdateTime" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Follow_Up" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Progress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Problem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ket_Lembur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_Atasan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_tanggal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_HC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_HC_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_HC_tanggal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tindakan" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Tgl_Tindakan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AbsentCode" Member="AbsentCodes">
+    <Type Name="AbsentCode">
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_M_INJEK_DEPT_ALL" Member="VW_M_INJEK_DEPT_ALLs">
+    <Type Name="VW_M_INJEK_DEPT_ALL">
+      <Column Name="nrp" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Absent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="revisiby" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tglrevisi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblinjekdept1" Member="tblinjekdept1s">
+    <Type Name="tblinjekdept1">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nrp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="revisiby" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="tglrevisi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="aprovehead" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tglhead" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nrphead" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="cathead" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="aprovehr" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nrphr" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="cathr" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tglhr" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Alat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.lembarkerja_BACKUP" Member="lembarkerja_BACKUPs">
+    <Type Name="lembarkerja_BACKUP">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="nrp" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[cn unit]" Member="cn_unit" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Alat" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="jk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="jkp_opr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="rest_time" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Absent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PemotongUlap" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TingkatSP" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="jk1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RosterCode" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="NoMesin1" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="NoMesin2" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Terlambat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SKL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL3" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SKL1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InputBY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TGLINPUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IpoUpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="alat_follow_up" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Follow_Up" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Progress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Problem" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="alat_approve_status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Ket_Lembur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_Atasan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Aprove_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aprove_HC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Aprove_HC_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Aprove_HC_tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_ABSENSI_ONLINE" Method="SP_ABSENSI_ONLINE">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.cusp_UploadDataAbsenPama" Method="cusp_UploadDataAbsenPama">
+    <Parameter Name="sSession" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNrp" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Absen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+
+<h2>Inject Absen</h2>
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="card" style="font-size:small">
+    <div class="body">
+        <div class="row clearfix">
+            <div class="col-sm-5">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <label class="control-label" style="margin-left:10px;">Upload Absen: </label>
+                                <input name="csvUpload" id="csvUpload" type="file" style="padding-top:-100px;" />
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form>
+            <div class="row clearfix">
+                <div class="col-sm-2">
+                    <b>Nrp</b>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="inputNrp" id="inputNrp" placeholder="Isi Nrp">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <b>Tgl Awal</b>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="inputAwal" id="inputAwal" placeholder="Isi Tgl Awal (yyyy-MM-dd)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <b>Tgl Akhir</b>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                        <div class="form-line">
+                            <input type="text" class="form-control" name="inputAkhir" id="inputAkhir" placeholder="Isi Tgl Akhir (yyyy-MM-dd)">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <b>&nbsp;</b>
+                    <button id="btnSearch" type="button" class="btn btn-sm waves-effect"><i class="glyphicon glyphicon-search"></i> Search</button>
+                </div>
+                <div class="col-sm-1">
+                    <b>&nbsp;</b>
+                    <button id="btnClear" class="btn btn-sm waves-effect" type="button"><i class="glyphicon glyphicon-erase"></i> Clear</button>
+                </div>
+            </div>
+        </form>
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div id="gridAbsen" style="font-size:smaller"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="@ViewBag.pathParent/Js/hrga.upload.absen.js"></script>
+
+
