@@ -242,10 +242,10 @@ function loadGridAbsen() {
 }
 
 function dropDownAbsent(container, options) {
-    $('<input required name="' + options.field + '"/>')
+    $('<input required name="Absent" id="Absent" data-value-field="Code" data-text-field="Keterangan" data-bind="value:' + options.field + '"/>')
         .appendTo(container)
         .kendoDropDownList({
-            autoBind: false,
+            autoBind: true,
             optionLabel: "--Select",
             dataTextField: "Keterangan",
             dataValueField: "Code",

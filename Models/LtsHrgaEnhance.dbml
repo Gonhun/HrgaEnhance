@@ -130,4 +130,66 @@
       <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.VW_R_POSITION" Member="VW_R_POSITIONs">
+    <Type Name="VW_R_POSITION">
+      <Column Name="POSITION_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="POSITION_DESC" Type="System.String" DbType="VarChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="POS_TEMPLATE_START" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="POS_TEMPLATE_STOP" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_R_PROFILE" Member="VW_R_PROFILEs">
+    <Type Name="VW_R_PROFILE">
+      <Column Name="ID_PROFILE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_MAPPING_AKSES" Member="TBL_R_MAPPING_AKSEs">
+    <Type Name="TBL_R_MAPPING_AKSE">
+      <Column Name="PID_MAPPING_AKSES" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MENU_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="C" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="R" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="U" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="D" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_PROFILE" Member="TBL_M_PROFILEs">
+    <Type Name="TBL_M_PROFILE">
+      <Column Name="PID_MAPPING_PROFILE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="USERID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ID_PROFILE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_MENU" Member="TBL_M_MENUs">
+    <Type Name="TBL_M_MENU">
+      <Column Name="PID_MENU" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MENU_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PARENT_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SORT_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MENU_LINK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLASS" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ICON" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="POSITON_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_PROFILE" Member="TBL_R_PROFILEs">
+    <Type Name="TBL_R_PROFILE">
+      <Column Name="ID_PROFILE" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.cufnGetMenuHrga" Method="cufnGetMenuHrga" IsComposable="true">
+    <Parameter Name="GPID" Parameter="gPID" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="cufnGetMenuHrgaResult">
+      <Column Name="InnerHTML" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

@@ -85,40 +85,7 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MAIN NAVIGATION</li>
-                    <li>
-                        <a href="/Home/Index">
-                            <i class="glyphicon glyphicon-home"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="glyphicon glyphicon-list-alt"></i>
-                            <span>Absen</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/UploadAbsen">Upload Inject Absen</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="glyphicon glyphicon-pawn"></i>
-                            <span>Karyawan</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="/MasterKaryawan">Data Karyawan</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-file"></i>
-                            <span>Report</span>
-                        </a>
-                    </li>
+                    @(new HtmlString((String)ViewData["myMenu"]))
                 </ul>
             </div>
             <!-- #Menu -->

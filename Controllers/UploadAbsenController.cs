@@ -37,6 +37,10 @@ namespace HrgaEnhance.Controllers
             else
             {
                 this.pv_CustLoadSession();
+                ClsHome clsHome = new ClsHome();
+                cufnGetMenuHrgaResult menu = clsHome.GetMenu(iStrSessGPID).FirstOrDefault();
+                ViewData["myMenu"] = menu.InnerHTML;
+
                 return View();
             }
         }

@@ -36,6 +36,18 @@ namespace HrgaEnhance.Models
     partial void InserttblKaryawan(tblKaryawan instance);
     partial void UpdatetblKaryawan(tblKaryawan instance);
     partial void DeletetblKaryawan(tblKaryawan instance);
+    partial void InsertTBL_R_MAPPING_AKSE(TBL_R_MAPPING_AKSE instance);
+    partial void UpdateTBL_R_MAPPING_AKSE(TBL_R_MAPPING_AKSE instance);
+    partial void DeleteTBL_R_MAPPING_AKSE(TBL_R_MAPPING_AKSE instance);
+    partial void InsertTBL_M_PROFILE(TBL_M_PROFILE instance);
+    partial void UpdateTBL_M_PROFILE(TBL_M_PROFILE instance);
+    partial void DeleteTBL_M_PROFILE(TBL_M_PROFILE instance);
+    partial void InsertTBL_M_MENU(TBL_M_MENU instance);
+    partial void UpdateTBL_M_MENU(TBL_M_MENU instance);
+    partial void DeleteTBL_M_MENU(TBL_M_MENU instance);
+    partial void InsertTBL_R_PROFILE(TBL_R_PROFILE instance);
+    partial void UpdateTBL_R_PROFILE(TBL_R_PROFILE instance);
+    partial void DeleteTBL_R_PROFILE(TBL_R_PROFILE instance);
     #endregion
 		
 		public LtsHrgaEnhanceDataContext() : 
@@ -90,6 +102,60 @@ namespace HrgaEnhance.Models
 			{
 				return this.GetTable<VW_M_PROFILE>();
 			}
+		}
+		
+		public System.Data.Linq.Table<VW_R_POSITION> VW_R_POSITIONs
+		{
+			get
+			{
+				return this.GetTable<VW_R_POSITION>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_R_PROFILE> VW_R_PROFILEs
+		{
+			get
+			{
+				return this.GetTable<VW_R_PROFILE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_R_MAPPING_AKSE> TBL_R_MAPPING_AKSEs
+		{
+			get
+			{
+				return this.GetTable<TBL_R_MAPPING_AKSE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_M_PROFILE> TBL_M_PROFILEs
+		{
+			get
+			{
+				return this.GetTable<TBL_M_PROFILE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_M_MENU> TBL_M_MENUs
+		{
+			get
+			{
+				return this.GetTable<TBL_M_MENU>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_R_PROFILE> TBL_R_PROFILEs
+		{
+			get
+			{
+				return this.GetTable<TBL_R_PROFILE>();
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cufnGetMenuHrga", IsComposable=true)]
+		public IQueryable<cufnGetMenuHrgaResult> cufnGetMenuHrga([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GPID", DbType="VarChar(10)")] string gPID)
+		{
+			return this.CreateMethodCallQuery<cufnGetMenuHrgaResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), gPID);
 		}
 	}
 	
@@ -2975,6 +3041,934 @@ namespace HrgaEnhance.Models
 				if ((this._PROFILE_NAME != value))
 				{
 					this._PROFILE_NAME = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_R_POSITION")]
+	public partial class VW_R_POSITION
+	{
+		
+		private int _POSITION_ID;
+		
+		private string _POSITION_DESC;
+		
+		private string _POS_TEMPLATE_START;
+		
+		private string _POS_TEMPLATE_STOP;
+		
+		public VW_R_POSITION()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POSITION_ID", DbType="Int NOT NULL")]
+		public int POSITION_ID
+		{
+			get
+			{
+				return this._POSITION_ID;
+			}
+			set
+			{
+				if ((this._POSITION_ID != value))
+				{
+					this._POSITION_ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POSITION_DESC", DbType="VarChar(13) NOT NULL", CanBeNull=false)]
+		public string POSITION_DESC
+		{
+			get
+			{
+				return this._POSITION_DESC;
+			}
+			set
+			{
+				if ((this._POSITION_DESC != value))
+				{
+					this._POSITION_DESC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POS_TEMPLATE_START", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+		public string POS_TEMPLATE_START
+		{
+			get
+			{
+				return this._POS_TEMPLATE_START;
+			}
+			set
+			{
+				if ((this._POS_TEMPLATE_START != value))
+				{
+					this._POS_TEMPLATE_START = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POS_TEMPLATE_STOP", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string POS_TEMPLATE_STOP
+		{
+			get
+			{
+				return this._POS_TEMPLATE_STOP;
+			}
+			set
+			{
+				if ((this._POS_TEMPLATE_STOP != value))
+				{
+					this._POS_TEMPLATE_STOP = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_R_PROFILE")]
+	public partial class VW_R_PROFILE
+	{
+		
+		private int _ID_PROFILE;
+		
+		private string _PROFILE_NAME;
+		
+		public VW_R_PROFILE()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFILE", DbType="Int NOT NULL")]
+		public int ID_PROFILE
+		{
+			get
+			{
+				return this._ID_PROFILE;
+			}
+			set
+			{
+				if ((this._ID_PROFILE != value))
+				{
+					this._ID_PROFILE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROFILE_NAME", DbType="VarChar(50)")]
+		public string PROFILE_NAME
+		{
+			get
+			{
+				return this._PROFILE_NAME;
+			}
+			set
+			{
+				if ((this._PROFILE_NAME != value))
+				{
+					this._PROFILE_NAME = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_R_MAPPING_AKSES")]
+	public partial class TBL_R_MAPPING_AKSE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PID_MAPPING_AKSES;
+		
+		private string _ID_PROFILE;
+		
+		private string _MENU_PID;
+		
+		private System.Nullable<short> _C;
+		
+		private System.Nullable<short> _R;
+		
+		private System.Nullable<short> _U;
+		
+		private System.Nullable<short> _D;
+		
+		private string _CREATED_BY;
+		
+		private System.Nullable<System.DateTime> _CREATE_DATE;
+		
+		private string _LAST_UPDATE_BY;
+		
+		private System.Nullable<System.DateTime> _LAST_UPDATE_DATE;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPID_MAPPING_AKSESChanging(string value);
+    partial void OnPID_MAPPING_AKSESChanged();
+    partial void OnID_PROFILEChanging(string value);
+    partial void OnID_PROFILEChanged();
+    partial void OnMENU_PIDChanging(string value);
+    partial void OnMENU_PIDChanged();
+    partial void OnCChanging(System.Nullable<short> value);
+    partial void OnCChanged();
+    partial void OnRChanging(System.Nullable<short> value);
+    partial void OnRChanged();
+    partial void OnUChanging(System.Nullable<short> value);
+    partial void OnUChanged();
+    partial void OnDChanging(System.Nullable<short> value);
+    partial void OnDChanged();
+    partial void OnCREATED_BYChanging(string value);
+    partial void OnCREATED_BYChanged();
+    partial void OnCREATE_DATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnCREATE_DATEChanged();
+    partial void OnLAST_UPDATE_BYChanging(string value);
+    partial void OnLAST_UPDATE_BYChanged();
+    partial void OnLAST_UPDATE_DATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnLAST_UPDATE_DATEChanged();
+    #endregion
+		
+		public TBL_R_MAPPING_AKSE()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID_MAPPING_AKSES", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PID_MAPPING_AKSES
+		{
+			get
+			{
+				return this._PID_MAPPING_AKSES;
+			}
+			set
+			{
+				if ((this._PID_MAPPING_AKSES != value))
+				{
+					this.OnPID_MAPPING_AKSESChanging(value);
+					this.SendPropertyChanging();
+					this._PID_MAPPING_AKSES = value;
+					this.SendPropertyChanged("PID_MAPPING_AKSES");
+					this.OnPID_MAPPING_AKSESChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFILE", DbType="VarChar(3)")]
+		public string ID_PROFILE
+		{
+			get
+			{
+				return this._ID_PROFILE;
+			}
+			set
+			{
+				if ((this._ID_PROFILE != value))
+				{
+					this.OnID_PROFILEChanging(value);
+					this.SendPropertyChanging();
+					this._ID_PROFILE = value;
+					this.SendPropertyChanged("ID_PROFILE");
+					this.OnID_PROFILEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_PID", DbType="VarChar(50)")]
+		public string MENU_PID
+		{
+			get
+			{
+				return this._MENU_PID;
+			}
+			set
+			{
+				if ((this._MENU_PID != value))
+				{
+					this.OnMENU_PIDChanging(value);
+					this.SendPropertyChanging();
+					this._MENU_PID = value;
+					this.SendPropertyChanged("MENU_PID");
+					this.OnMENU_PIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C", DbType="SmallInt")]
+		public System.Nullable<short> C
+		{
+			get
+			{
+				return this._C;
+			}
+			set
+			{
+				if ((this._C != value))
+				{
+					this.OnCChanging(value);
+					this.SendPropertyChanging();
+					this._C = value;
+					this.SendPropertyChanged("C");
+					this.OnCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_R", DbType="SmallInt")]
+		public System.Nullable<short> R
+		{
+			get
+			{
+				return this._R;
+			}
+			set
+			{
+				if ((this._R != value))
+				{
+					this.OnRChanging(value);
+					this.SendPropertyChanging();
+					this._R = value;
+					this.SendPropertyChanged("R");
+					this.OnRChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U", DbType="SmallInt")]
+		public System.Nullable<short> U
+		{
+			get
+			{
+				return this._U;
+			}
+			set
+			{
+				if ((this._U != value))
+				{
+					this.OnUChanging(value);
+					this.SendPropertyChanging();
+					this._U = value;
+					this.SendPropertyChanged("U");
+					this.OnUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D", DbType="SmallInt")]
+		public System.Nullable<short> D
+		{
+			get
+			{
+				return this._D;
+			}
+			set
+			{
+				if ((this._D != value))
+				{
+					this.OnDChanging(value);
+					this.SendPropertyChanging();
+					this._D = value;
+					this.SendPropertyChanged("D");
+					this.OnDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATED_BY", DbType="VarChar(10)")]
+		public string CREATED_BY
+		{
+			get
+			{
+				return this._CREATED_BY;
+			}
+			set
+			{
+				if ((this._CREATED_BY != value))
+				{
+					this.OnCREATED_BYChanging(value);
+					this.SendPropertyChanging();
+					this._CREATED_BY = value;
+					this.SendPropertyChanged("CREATED_BY");
+					this.OnCREATED_BYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CREATE_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> CREATE_DATE
+		{
+			get
+			{
+				return this._CREATE_DATE;
+			}
+			set
+			{
+				if ((this._CREATE_DATE != value))
+				{
+					this.OnCREATE_DATEChanging(value);
+					this.SendPropertyChanging();
+					this._CREATE_DATE = value;
+					this.SendPropertyChanged("CREATE_DATE");
+					this.OnCREATE_DATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LAST_UPDATE_BY", DbType="VarChar(10)")]
+		public string LAST_UPDATE_BY
+		{
+			get
+			{
+				return this._LAST_UPDATE_BY;
+			}
+			set
+			{
+				if ((this._LAST_UPDATE_BY != value))
+				{
+					this.OnLAST_UPDATE_BYChanging(value);
+					this.SendPropertyChanging();
+					this._LAST_UPDATE_BY = value;
+					this.SendPropertyChanged("LAST_UPDATE_BY");
+					this.OnLAST_UPDATE_BYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LAST_UPDATE_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LAST_UPDATE_DATE
+		{
+			get
+			{
+				return this._LAST_UPDATE_DATE;
+			}
+			set
+			{
+				if ((this._LAST_UPDATE_DATE != value))
+				{
+					this.OnLAST_UPDATE_DATEChanging(value);
+					this.SendPropertyChanging();
+					this._LAST_UPDATE_DATE = value;
+					this.SendPropertyChanged("LAST_UPDATE_DATE");
+					this.OnLAST_UPDATE_DATEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_M_PROFILE")]
+	public partial class TBL_M_PROFILE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PID_MAPPING_PROFILE;
+		
+		private string _USERID;
+		
+		private System.Nullable<int> _ID_PROFILE;
+		
+		private System.Nullable<System.DateTime> _LAST_UPDATE_DATE;
+		
+		private string _LAST_UPDATE_BY;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPID_MAPPING_PROFILEChanging(string value);
+    partial void OnPID_MAPPING_PROFILEChanged();
+    partial void OnUSERIDChanging(string value);
+    partial void OnUSERIDChanged();
+    partial void OnID_PROFILEChanging(System.Nullable<int> value);
+    partial void OnID_PROFILEChanged();
+    partial void OnLAST_UPDATE_DATEChanging(System.Nullable<System.DateTime> value);
+    partial void OnLAST_UPDATE_DATEChanged();
+    partial void OnLAST_UPDATE_BYChanging(string value);
+    partial void OnLAST_UPDATE_BYChanged();
+    #endregion
+		
+		public TBL_M_PROFILE()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID_MAPPING_PROFILE", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PID_MAPPING_PROFILE
+		{
+			get
+			{
+				return this._PID_MAPPING_PROFILE;
+			}
+			set
+			{
+				if ((this._PID_MAPPING_PROFILE != value))
+				{
+					this.OnPID_MAPPING_PROFILEChanging(value);
+					this.SendPropertyChanging();
+					this._PID_MAPPING_PROFILE = value;
+					this.SendPropertyChanged("PID_MAPPING_PROFILE");
+					this.OnPID_MAPPING_PROFILEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_USERID", DbType="VarChar(10)")]
+		public string USERID
+		{
+			get
+			{
+				return this._USERID;
+			}
+			set
+			{
+				if ((this._USERID != value))
+				{
+					this.OnUSERIDChanging(value);
+					this.SendPropertyChanging();
+					this._USERID = value;
+					this.SendPropertyChanged("USERID");
+					this.OnUSERIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFILE", DbType="Int")]
+		public System.Nullable<int> ID_PROFILE
+		{
+			get
+			{
+				return this._ID_PROFILE;
+			}
+			set
+			{
+				if ((this._ID_PROFILE != value))
+				{
+					this.OnID_PROFILEChanging(value);
+					this.SendPropertyChanging();
+					this._ID_PROFILE = value;
+					this.SendPropertyChanged("ID_PROFILE");
+					this.OnID_PROFILEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LAST_UPDATE_DATE", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LAST_UPDATE_DATE
+		{
+			get
+			{
+				return this._LAST_UPDATE_DATE;
+			}
+			set
+			{
+				if ((this._LAST_UPDATE_DATE != value))
+				{
+					this.OnLAST_UPDATE_DATEChanging(value);
+					this.SendPropertyChanging();
+					this._LAST_UPDATE_DATE = value;
+					this.SendPropertyChanged("LAST_UPDATE_DATE");
+					this.OnLAST_UPDATE_DATEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LAST_UPDATE_BY", DbType="VarChar(10)")]
+		public string LAST_UPDATE_BY
+		{
+			get
+			{
+				return this._LAST_UPDATE_BY;
+			}
+			set
+			{
+				if ((this._LAST_UPDATE_BY != value))
+				{
+					this.OnLAST_UPDATE_BYChanging(value);
+					this.SendPropertyChanging();
+					this._LAST_UPDATE_BY = value;
+					this.SendPropertyChanged("LAST_UPDATE_BY");
+					this.OnLAST_UPDATE_BYChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_M_MENU")]
+	public partial class TBL_M_MENU : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _PID_MENU;
+		
+		private string _MENU_DESC;
+		
+		private string _PARENT_PID;
+		
+		private System.Nullable<int> _SORT_ORDER;
+		
+		private string _MENU_LINK;
+		
+		private string _CLASS;
+		
+		private string _ICON;
+		
+		private System.Nullable<int> _POSITON_ID;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPID_MENUChanging(string value);
+    partial void OnPID_MENUChanged();
+    partial void OnMENU_DESCChanging(string value);
+    partial void OnMENU_DESCChanged();
+    partial void OnPARENT_PIDChanging(string value);
+    partial void OnPARENT_PIDChanged();
+    partial void OnSORT_ORDERChanging(System.Nullable<int> value);
+    partial void OnSORT_ORDERChanged();
+    partial void OnMENU_LINKChanging(string value);
+    partial void OnMENU_LINKChanged();
+    partial void OnCLASSChanging(string value);
+    partial void OnCLASSChanged();
+    partial void OnICONChanging(string value);
+    partial void OnICONChanged();
+    partial void OnPOSITON_IDChanging(System.Nullable<int> value);
+    partial void OnPOSITON_IDChanged();
+    #endregion
+		
+		public TBL_M_MENU()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID_MENU", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string PID_MENU
+		{
+			get
+			{
+				return this._PID_MENU;
+			}
+			set
+			{
+				if ((this._PID_MENU != value))
+				{
+					this.OnPID_MENUChanging(value);
+					this.SendPropertyChanging();
+					this._PID_MENU = value;
+					this.SendPropertyChanged("PID_MENU");
+					this.OnPID_MENUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_DESC", DbType="VarChar(MAX)")]
+		public string MENU_DESC
+		{
+			get
+			{
+				return this._MENU_DESC;
+			}
+			set
+			{
+				if ((this._MENU_DESC != value))
+				{
+					this.OnMENU_DESCChanging(value);
+					this.SendPropertyChanging();
+					this._MENU_DESC = value;
+					this.SendPropertyChanged("MENU_DESC");
+					this.OnMENU_DESCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PARENT_PID", DbType="VarChar(50)")]
+		public string PARENT_PID
+		{
+			get
+			{
+				return this._PARENT_PID;
+			}
+			set
+			{
+				if ((this._PARENT_PID != value))
+				{
+					this.OnPARENT_PIDChanging(value);
+					this.SendPropertyChanging();
+					this._PARENT_PID = value;
+					this.SendPropertyChanged("PARENT_PID");
+					this.OnPARENT_PIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SORT_ORDER", DbType="Int")]
+		public System.Nullable<int> SORT_ORDER
+		{
+			get
+			{
+				return this._SORT_ORDER;
+			}
+			set
+			{
+				if ((this._SORT_ORDER != value))
+				{
+					this.OnSORT_ORDERChanging(value);
+					this.SendPropertyChanging();
+					this._SORT_ORDER = value;
+					this.SendPropertyChanged("SORT_ORDER");
+					this.OnSORT_ORDERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_LINK", DbType="VarChar(MAX)")]
+		public string MENU_LINK
+		{
+			get
+			{
+				return this._MENU_LINK;
+			}
+			set
+			{
+				if ((this._MENU_LINK != value))
+				{
+					this.OnMENU_LINKChanging(value);
+					this.SendPropertyChanging();
+					this._MENU_LINK = value;
+					this.SendPropertyChanged("MENU_LINK");
+					this.OnMENU_LINKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLASS", DbType="VarChar(MAX)")]
+		public string CLASS
+		{
+			get
+			{
+				return this._CLASS;
+			}
+			set
+			{
+				if ((this._CLASS != value))
+				{
+					this.OnCLASSChanging(value);
+					this.SendPropertyChanging();
+					this._CLASS = value;
+					this.SendPropertyChanged("CLASS");
+					this.OnCLASSChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ICON", DbType="VarChar(MAX)")]
+		public string ICON
+		{
+			get
+			{
+				return this._ICON;
+			}
+			set
+			{
+				if ((this._ICON != value))
+				{
+					this.OnICONChanging(value);
+					this.SendPropertyChanging();
+					this._ICON = value;
+					this.SendPropertyChanged("ICON");
+					this.OnICONChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POSITON_ID", DbType="Int")]
+		public System.Nullable<int> POSITON_ID
+		{
+			get
+			{
+				return this._POSITON_ID;
+			}
+			set
+			{
+				if ((this._POSITON_ID != value))
+				{
+					this.OnPOSITON_IDChanging(value);
+					this.SendPropertyChanging();
+					this._POSITON_ID = value;
+					this.SendPropertyChanged("POSITON_ID");
+					this.OnPOSITON_IDChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_R_PROFILE")]
+	public partial class TBL_R_PROFILE : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID_PROFILE;
+		
+		private string _PROFILE_NAME;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnID_PROFILEChanging(int value);
+    partial void OnID_PROFILEChanged();
+    partial void OnPROFILE_NAMEChanging(string value);
+    partial void OnPROFILE_NAMEChanged();
+    #endregion
+		
+		public TBL_R_PROFILE()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFILE", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int ID_PROFILE
+		{
+			get
+			{
+				return this._ID_PROFILE;
+			}
+			set
+			{
+				if ((this._ID_PROFILE != value))
+				{
+					this.OnID_PROFILEChanging(value);
+					this.SendPropertyChanging();
+					this._ID_PROFILE = value;
+					this.SendPropertyChanged("ID_PROFILE");
+					this.OnID_PROFILEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROFILE_NAME", DbType="VarChar(50)")]
+		public string PROFILE_NAME
+		{
+			get
+			{
+				return this._PROFILE_NAME;
+			}
+			set
+			{
+				if ((this._PROFILE_NAME != value))
+				{
+					this.OnPROFILE_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._PROFILE_NAME = value;
+					this.SendPropertyChanged("PROFILE_NAME");
+					this.OnPROFILE_NAMEChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class cufnGetMenuHrgaResult
+	{
+		
+		private string _InnerHTML;
+		
+		public cufnGetMenuHrgaResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InnerHTML", DbType="VarChar(MAX)")]
+		public string InnerHTML
+		{
+			get
+			{
+				return this._InnerHTML;
+			}
+			set
+			{
+				if ((this._InnerHTML != value))
+				{
+					this._InnerHTML = value;
 				}
 			}
 		}
