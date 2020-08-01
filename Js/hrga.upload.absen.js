@@ -136,6 +136,7 @@ function loadGridAbsen() {
                         tanggal: { type: "date", editable: true },
                         shift: { type: "number", editable: true },
                         Absent: { type: "string", editable: true },
+                        RosterCode: { type: "number", editable: true },
                         in: { type: "date", editable: true },
                         out: { type: "date", editable: true },
                         //REMARKS_UPLOAD: { type: "string", editable: false }
@@ -183,7 +184,7 @@ function loadGridAbsen() {
                 editable: false
             },
             {
-                field: "nrp", title: "Nrp", width: 20
+                field: "nrp", title: "Nrp", width: 15
             },
             {
                 field: "tanggal"
@@ -200,6 +201,9 @@ function loadGridAbsen() {
             },
             {
                 field: "shift", title: "Shift", width: 10
+            },
+            {
+                field: "RosterCode", title: "Roster", width: 15
             },
             {
                 field: "in"
