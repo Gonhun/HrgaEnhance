@@ -155,6 +155,8 @@ namespace HrgaEnhance.Models
             [Required(ErrorMessage = "Shift harus diisi")]
             public String Shift { get; set; }
             
+            public decimal? RosterCode { get; set; }
+
             public DateTime? @in { get; set; }
             
             public DateTime? @out { get; set; }

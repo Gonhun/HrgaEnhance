@@ -44,6 +44,7 @@ namespace HrgaEnhance.Models
                 iTbl.@in = sParameter.@in;
                 iTbl.@out = sParameter.@out;
                 iTbl.Absent = sParameter.Absent;
+                iTbl.RosterCode = sParameter.RosterCode;
                 iTbl.SKL = sParameter.SKL;
 
                 tblinjekdept1 iTblTemp = new tblinjekdept1();
