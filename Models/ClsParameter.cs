@@ -167,5 +167,20 @@ namespace HrgaEnhance.Models
 
             public String Keterangan { get; set; }
         }
+
+        public class User
+        {
+            public String PID_MAPPING_PROFILE { get; set; }
+
+            [Required(ErrorMessage = "Userid harus diisi")]
+            public String USERID { get; set; }
+
+            [Required(ErrorMessage = "Profil harus diisi")]
+            public int? ID_PROFILE { get; set; }
+
+            public String LAST_UPDATE_BY { get; set; }
+
+            public DateTime? LAST_UPDATE_DATE { get; set; }
+        }
     }
 }

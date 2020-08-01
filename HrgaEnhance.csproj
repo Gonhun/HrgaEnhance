@@ -196,6 +196,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClsHome.cs" />
     <Compile Include="Models\ClsLogin.cs" />
+    <Compile Include="Models\ClsMasterUser.cs" />
     <Compile Include="Models\ClsUploadAbsen.cs" />
     <Compile Include="Models\ClsMasterKaryawan.cs" />
     <Compile Include="Models\ClsMasterSutu.cs" />
