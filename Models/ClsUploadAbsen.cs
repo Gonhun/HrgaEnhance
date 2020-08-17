@@ -76,6 +76,7 @@ namespace HrgaEnhance.Models
             }
             catch(Exception e)
             {
+                String remarks = e.ToString();
                 return false;
             }
         }

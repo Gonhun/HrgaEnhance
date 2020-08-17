@@ -88,7 +88,7 @@ namespace HrgaEnhance.Models
             }
             else
             {
-                parameter.Nrp = vW_R.NRP;
+                parameter.Nrp = sParameter;
                 parameter.Nama = vW_R.NAME;
                 parameter.TempatLahir = vW_R.BIRTH_PLACE_DESC;
                 parameter.TglLahir = Convert.ToDateTime(vW_R.BIRTH_DATE);
@@ -219,6 +219,7 @@ namespace HrgaEnhance.Models
             }
             catch(Exception e)
             {
+                String remarks = e.ToString();
                 Status = false;
             }
             return Status;
@@ -293,6 +294,7 @@ namespace HrgaEnhance.Models
             }
             catch(Exception e)
             {
+                String remarks = e.ToString();
                 Status = false;
             }
             return Status;

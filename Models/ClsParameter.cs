@@ -182,5 +182,58 @@ namespace HrgaEnhance.Models
 
             public DateTime? LAST_UPDATE_DATE { get; set; }
         }
+
+        public class Report
+        {
+            public string PID_REPORT { get; set; }
+
+            public string REPORT_NAME { get; set; }
+
+            public string REPORT_SERVER { get; set; }
+
+            public string REPORT_PATH { get; set; }
+
+            public string REPORT_CATEGORY { get; set; }
+
+            public bool STATUS { get; set; }
+        }
+
+        public class Menu
+        {
+            public string PID_MENU { get; set; }
+
+            [Required(ErrorMessage = "Nama Menu harus diisi")]
+            public string MENU_DESC { get; set; }
+
+            public string PARENT_PID { get; set; }
+
+            public int? SORT_ORDER { get; set; }
+
+            public string MENU_LINK { get; set; }
+
+            public string CLASS { get; set; }
+
+            public string ICON { get; set; }
+
+            public int? POSITON_ID { get; set; }
+        }
+
+        public class Akses
+        {
+            public string PID_MAPPING_AKSES { get; set; }
+            
+            public string ID_PROFILE { get; set; }
+            
+            public string MENU_PID { get; set; }
+
+            public short? C { get; set; }
+
+            public short? R { get; set; }
+
+            public short? U { get; set; }
+
+            public short? D { get; set; }
+
+        }
     }
 }

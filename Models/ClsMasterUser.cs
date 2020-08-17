@@ -8,13 +8,25 @@ namespace HrgaEnhance.Models
 {
     public class ClsMasterUser
     {
-        public IQueryable<TBL_M_PROFILE> getUser()
+        public IQueryable<VW_M_PROFILE> getUser()
         {
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
-            return dataContext.TBL_M_PROFILEs;
+            return dataContext.VW_M_PROFILEs;
         }
 
-        public bool insert(ClsParameter.User parameterUser, string iStrSessNrp)
+        public IQueryable<TBL_R_PROFILE> getProfile()
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.TBL_R_PROFILEs;
+        }
+
+        public String getNama(string sParameter)
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.tblKaryawans.Where(j => j.Nrp.Equals(sParameter)).Select(j => j.Nama).FirstOrDefault();
+        }
+
+        public bool insertUser(ClsParameter.User parameterUser, string iStrSessNrp)
         {
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
             bool Status;
@@ -35,13 +47,14 @@ namespace HrgaEnhance.Models
             }
             catch(Exception e)
             {
+                String remarks = e.ToString();
                 Status = false;
             }
 
             return Status;
         }
 
-        public bool update(ClsParameter.User parameterUser, string iStrSessNrp)
+        public bool updateUser(ClsParameter.User parameterUser, string iStrSessNrp)
         {
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
             bool Status;
@@ -59,13 +72,14 @@ namespace HrgaEnhance.Models
             }
             catch (Exception e)
             {
+                String remarks = e.ToString();
                 Status = false;
             }
 
             return Status;
         }
 
-        public bool delete(ClsParameter.User parameterUser, string iStrSessNrp)
+        public bool deleteUser(ClsParameter.User parameterUser, string iStrSessNrp)
         {
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
             bool Status;
@@ -80,6 +94,7 @@ namespace HrgaEnhance.Models
             }
             catch (Exception e)
             {
+                String remarks = e.ToString();
                 Status = false;
             }
 

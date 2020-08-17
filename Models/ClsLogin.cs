@@ -21,5 +21,7 @@ namespace HrgaEnhance.Models
             LtsAdroWebDataContext dataContext = new LtsAdroWebDataContext();
             return dataContext.tblLogins;
         }
+
+        
     }
 }

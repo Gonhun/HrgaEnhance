@@ -9,8 +9,7 @@ namespace HrgaEnhance.Controllers
 {
     public class HomeController : Controller
     {
-        bool Status;
-        String Remarks;
+        
         private string iStrSessNRP = string.Empty;
         private string iStrSessDistrik = string.Empty;
         private string iStrSessGPID = string.Empty;

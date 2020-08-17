@@ -48,6 +48,9 @@ namespace HrgaEnhance.Models
     partial void InsertTBL_R_PROFILE(TBL_R_PROFILE instance);
     partial void UpdateTBL_R_PROFILE(TBL_R_PROFILE instance);
     partial void DeleteTBL_R_PROFILE(TBL_R_PROFILE instance);
+    partial void InsertTBL_M_REPORT(TBL_M_REPORT instance);
+    partial void UpdateTBL_M_REPORT(TBL_M_REPORT instance);
+    partial void DeleteTBL_M_REPORT(TBL_M_REPORT instance);
     #endregion
 		
 		public LtsHrgaEnhanceDataContext() : 
@@ -149,6 +152,30 @@ namespace HrgaEnhance.Models
 			get
 			{
 				return this.GetTable<TBL_R_PROFILE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TBL_M_REPORT> TBL_M_REPORTs
+		{
+			get
+			{
+				return this.GetTable<TBL_M_REPORT>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_M_MENU> VW_M_MENUs
+		{
+			get
+			{
+				return this.GetTable<VW_M_MENU>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_R_MAPPING_AKSE> VW_R_MAPPING_AKSEs
+		{
+			get
+			{
+				return this.GetTable<VW_R_MAPPING_AKSE>();
 			}
 		}
 		
@@ -3944,6 +3971,548 @@ namespace HrgaEnhance.Models
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TBL_M_REPORT")]
+	public partial class TBL_M_REPORT : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _REPORT_ID;
+		
+		private string _REPORT_NAME;
+		
+		private string _REPORT_SERVER;
+		
+		private string _REPORT_PATH;
+		
+		private string _REPORT_CATEGORY;
+		
+		private System.Nullable<bool> _STATUS;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnREPORT_IDChanging(string value);
+    partial void OnREPORT_IDChanged();
+    partial void OnREPORT_NAMEChanging(string value);
+    partial void OnREPORT_NAMEChanged();
+    partial void OnREPORT_SERVERChanging(string value);
+    partial void OnREPORT_SERVERChanged();
+    partial void OnREPORT_PATHChanging(string value);
+    partial void OnREPORT_PATHChanged();
+    partial void OnREPORT_CATEGORYChanging(string value);
+    partial void OnREPORT_CATEGORYChanged();
+    partial void OnSTATUSChanging(System.Nullable<bool> value);
+    partial void OnSTATUSChanged();
+    #endregion
+		
+		public TBL_M_REPORT()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REPORT_ID", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string REPORT_ID
+		{
+			get
+			{
+				return this._REPORT_ID;
+			}
+			set
+			{
+				if ((this._REPORT_ID != value))
+				{
+					this.OnREPORT_IDChanging(value);
+					this.SendPropertyChanging();
+					this._REPORT_ID = value;
+					this.SendPropertyChanged("REPORT_ID");
+					this.OnREPORT_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REPORT_NAME", DbType="VarChar(150)")]
+		public string REPORT_NAME
+		{
+			get
+			{
+				return this._REPORT_NAME;
+			}
+			set
+			{
+				if ((this._REPORT_NAME != value))
+				{
+					this.OnREPORT_NAMEChanging(value);
+					this.SendPropertyChanging();
+					this._REPORT_NAME = value;
+					this.SendPropertyChanged("REPORT_NAME");
+					this.OnREPORT_NAMEChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REPORT_SERVER", DbType="VarChar(150)")]
+		public string REPORT_SERVER
+		{
+			get
+			{
+				return this._REPORT_SERVER;
+			}
+			set
+			{
+				if ((this._REPORT_SERVER != value))
+				{
+					this.OnREPORT_SERVERChanging(value);
+					this.SendPropertyChanging();
+					this._REPORT_SERVER = value;
+					this.SendPropertyChanged("REPORT_SERVER");
+					this.OnREPORT_SERVERChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REPORT_PATH", DbType="VarChar(150)")]
+		public string REPORT_PATH
+		{
+			get
+			{
+				return this._REPORT_PATH;
+			}
+			set
+			{
+				if ((this._REPORT_PATH != value))
+				{
+					this.OnREPORT_PATHChanging(value);
+					this.SendPropertyChanging();
+					this._REPORT_PATH = value;
+					this.SendPropertyChanged("REPORT_PATH");
+					this.OnREPORT_PATHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_REPORT_CATEGORY", DbType="VarChar(50)")]
+		public string REPORT_CATEGORY
+		{
+			get
+			{
+				return this._REPORT_CATEGORY;
+			}
+			set
+			{
+				if ((this._REPORT_CATEGORY != value))
+				{
+					this.OnREPORT_CATEGORYChanging(value);
+					this.SendPropertyChanging();
+					this._REPORT_CATEGORY = value;
+					this.SendPropertyChanged("REPORT_CATEGORY");
+					this.OnREPORT_CATEGORYChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUS", DbType="Bit")]
+		public System.Nullable<bool> STATUS
+		{
+			get
+			{
+				return this._STATUS;
+			}
+			set
+			{
+				if ((this._STATUS != value))
+				{
+					this.OnSTATUSChanging(value);
+					this.SendPropertyChanging();
+					this._STATUS = value;
+					this.SendPropertyChanged("STATUS");
+					this.OnSTATUSChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_M_MENU")]
+	public partial class VW_M_MENU
+	{
+		
+		private string _PID_MENU;
+		
+		private string _MENU_DESC;
+		
+		private string _PARENT_PID;
+		
+		private string _MENU_PARENT;
+		
+		private System.Nullable<int> _SORT_ORDER;
+		
+		private string _MENU_LINK;
+		
+		private string _CLASS;
+		
+		private string _ICON;
+		
+		private System.Nullable<int> _POSITON_ID;
+		
+		public VW_M_MENU()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID_MENU", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string PID_MENU
+		{
+			get
+			{
+				return this._PID_MENU;
+			}
+			set
+			{
+				if ((this._PID_MENU != value))
+				{
+					this._PID_MENU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_DESC", DbType="VarChar(MAX)")]
+		public string MENU_DESC
+		{
+			get
+			{
+				return this._MENU_DESC;
+			}
+			set
+			{
+				if ((this._MENU_DESC != value))
+				{
+					this._MENU_DESC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PARENT_PID", DbType="VarChar(50)")]
+		public string PARENT_PID
+		{
+			get
+			{
+				return this._PARENT_PID;
+			}
+			set
+			{
+				if ((this._PARENT_PID != value))
+				{
+					this._PARENT_PID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_PARENT", DbType="VarChar(MAX)")]
+		public string MENU_PARENT
+		{
+			get
+			{
+				return this._MENU_PARENT;
+			}
+			set
+			{
+				if ((this._MENU_PARENT != value))
+				{
+					this._MENU_PARENT = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SORT_ORDER", DbType="Int")]
+		public System.Nullable<int> SORT_ORDER
+		{
+			get
+			{
+				return this._SORT_ORDER;
+			}
+			set
+			{
+				if ((this._SORT_ORDER != value))
+				{
+					this._SORT_ORDER = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_LINK", DbType="VarChar(MAX)")]
+		public string MENU_LINK
+		{
+			get
+			{
+				return this._MENU_LINK;
+			}
+			set
+			{
+				if ((this._MENU_LINK != value))
+				{
+					this._MENU_LINK = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CLASS", DbType="VarChar(MAX)")]
+		public string CLASS
+		{
+			get
+			{
+				return this._CLASS;
+			}
+			set
+			{
+				if ((this._CLASS != value))
+				{
+					this._CLASS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ICON", DbType="VarChar(MAX)")]
+		public string ICON
+		{
+			get
+			{
+				return this._ICON;
+			}
+			set
+			{
+				if ((this._ICON != value))
+				{
+					this._ICON = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_POSITON_ID", DbType="Int")]
+		public System.Nullable<int> POSITON_ID
+		{
+			get
+			{
+				return this._POSITON_ID;
+			}
+			set
+			{
+				if ((this._POSITON_ID != value))
+				{
+					this._POSITON_ID = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_R_MAPPING_AKSES")]
+	public partial class VW_R_MAPPING_AKSE
+	{
+		
+		private string _PID_MAPPING_AKSES;
+		
+		private string _ID_PROFILE;
+		
+		private string _PROFILE_NAME;
+		
+		private string _MENU_PID;
+		
+		private string _MENU_DESC;
+		
+		private System.Nullable<short> _C;
+		
+		private System.Nullable<short> _R;
+		
+		private System.Nullable<short> _U;
+		
+		private System.Nullable<short> _D;
+		
+		private string _MENU_LINK;
+		
+		public VW_R_MAPPING_AKSE()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PID_MAPPING_AKSES", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string PID_MAPPING_AKSES
+		{
+			get
+			{
+				return this._PID_MAPPING_AKSES;
+			}
+			set
+			{
+				if ((this._PID_MAPPING_AKSES != value))
+				{
+					this._PID_MAPPING_AKSES = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFILE", DbType="VarChar(3)")]
+		public string ID_PROFILE
+		{
+			get
+			{
+				return this._ID_PROFILE;
+			}
+			set
+			{
+				if ((this._ID_PROFILE != value))
+				{
+					this._ID_PROFILE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PROFILE_NAME", DbType="VarChar(50)")]
+		public string PROFILE_NAME
+		{
+			get
+			{
+				return this._PROFILE_NAME;
+			}
+			set
+			{
+				if ((this._PROFILE_NAME != value))
+				{
+					this._PROFILE_NAME = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_PID", DbType="VarChar(50)")]
+		public string MENU_PID
+		{
+			get
+			{
+				return this._MENU_PID;
+			}
+			set
+			{
+				if ((this._MENU_PID != value))
+				{
+					this._MENU_PID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_DESC", DbType="VarChar(MAX)")]
+		public string MENU_DESC
+		{
+			get
+			{
+				return this._MENU_DESC;
+			}
+			set
+			{
+				if ((this._MENU_DESC != value))
+				{
+					this._MENU_DESC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_C", DbType="SmallInt")]
+		public System.Nullable<short> C
+		{
+			get
+			{
+				return this._C;
+			}
+			set
+			{
+				if ((this._C != value))
+				{
+					this._C = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_R", DbType="SmallInt")]
+		public System.Nullable<short> R
+		{
+			get
+			{
+				return this._R;
+			}
+			set
+			{
+				if ((this._R != value))
+				{
+					this._R = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_U", DbType="SmallInt")]
+		public System.Nullable<short> U
+		{
+			get
+			{
+				return this._U;
+			}
+			set
+			{
+				if ((this._U != value))
+				{
+					this._U = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_D", DbType="SmallInt")]
+		public System.Nullable<short> D
+		{
+			get
+			{
+				return this._D;
+			}
+			set
+			{
+				if ((this._D != value))
+				{
+					this._D = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MENU_LINK", DbType="VarChar(MAX)")]
+		public string MENU_LINK
+		{
+			get
+			{
+				return this._MENU_LINK;
+			}
+			set
+			{
+				if ((this._MENU_LINK != value))
+				{
+					this._MENU_LINK = value;
+				}
 			}
 		}
 	}

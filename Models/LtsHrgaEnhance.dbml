@@ -186,6 +186,43 @@
       <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TBL_M_REPORT" Member="TBL_M_REPORTs">
+    <Type Name="TBL_M_REPORT">
+      <Column Name="REPORT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REPORT_NAME" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_SERVER" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_PATH" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_CATEGORY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_M_MENU" Member="VW_M_MENUs">
+    <Type Name="VW_M_MENU">
+      <Column Name="PID_MENU" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MENU_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PARENT_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MENU_PARENT" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SORT_ORDER" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MENU_LINK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CLASS" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ICON" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="POSITON_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_R_MAPPING_AKSES" Member="VW_R_MAPPING_AKSEs">
+    <Type Name="VW_R_MAPPING_AKSE">
+      <Column Name="PID_MAPPING_AKSES" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MENU_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MENU_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="C" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="R" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="U" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="D" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MENU_LINK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.cufnGetMenuHrga" Method="cufnGetMenuHrga" IsComposable="true">
     <Parameter Name="GPID" Parameter="gPID" Type="System.String" DbType="VarChar(10)" />
     <ElementType Name="cufnGetMenuHrgaResult">

@@ -187,6 +187,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MasterMappingAksesController.cs" />
+    <Compile Include="Controllers\MasterMenuController.cs" />
+    <Compile Include="Controllers\MasterUserController.cs" />
     <Compile Include="Controllers\UploadAbsenController.cs" />
     <Compile Include="Controllers\MasterKaryawanController.cs" />
     <Compile Include="Controllers\MasterSutuController.cs" />
@@ -196,6 +199,9 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClsHome.cs" />
     <Compile Include="Models\ClsLogin.cs" />
+    <Compile Include="Models\ClsMasterMappingAkses.cs" />
+    <Compile Include="Models\ClsMasterMenu.cs" />
+    <Compile Include="Models\ClsMasterReport.cs" />
     <Compile Include="Models\ClsMasterUser.cs" />
     <Compile Include="Models\ClsUploadAbsen.cs" />
     <Compile Include="Models\ClsMasterKaryawan.cs" />
@@ -638,6 +644,9 @@
     <Content Include="images\user-lg.jpg" />
     <Content Include="images\user.jpg" />
     <Content Include="images\user.png" />
+    <Content Include="Js\hrga.master.mapping.akses.js" />
+    <Content Include="Js\hrga.master.menu.js" />
+    <Content Include="Js\hrga.master.user.js" />
     <Content Include="Js\hrga.upload.absen.js" />
     <Content Include="Js\hrga.master.karyawan.js" />
     <Content Include="Scripts\admin.js" />
@@ -3120,6 +3129,9 @@
     <Content Include="Views\MasterKaryawan\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Login\Profiles.cshtml" />
+    <Content Include="Views\MasterUser\Index.cshtml" />
+    <Content Include="Views\MasterMenu\Index.cshtml" />
+    <Content Include="Views\MasterMappingAkses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

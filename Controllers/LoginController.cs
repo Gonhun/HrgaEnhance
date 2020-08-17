@@ -24,18 +24,16 @@ namespace HrgaEnhance.Controllers
         public ActionResult getUser(ClsLogin clsLogin)
         {
             ClsLogin iCls = new ClsLogin();
-            bool iReturn;
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
 
             try
             {
                 var ldap = new LdapAuthentication("LDAP://PAMAPERSADA:389");
-                iReturn = ldap.IsAuthenticated("PAMAPERSADA", clsLogin.userid, clsLogin.password);
+                Status = ldap.IsAuthenticated("PAMAPERSADA", clsLogin.userid, clsLogin.password);
 
-                if (iReturn)
+                if (Status)
                 {
                     String idLogin;
-                    String password;
                     idLogin = clsLogin.userid.Length == 0 ? "0" : clsLogin.userid;
                     idLogin = idLogin.Substring(1, idLogin.Length - 1);
                     var list_gpId = dataContext.VW_M_PROFILEs.Where(f => f.USERID == idLogin).ToList();
@@ -66,7 +64,8 @@ namespace HrgaEnhance.Controllers
             }
             catch (Exception e)
             {
-                iReturn = false;
+                Remarks = e.ToString();
+                Status = false;
                 TempData["notice"] = "Jaringan error atau Anda belum memiliki login komputer. Segera info ke tim IT";
             }
             return RedirectToAction("Index", "Login");
@@ -154,6 +153,7 @@ namespace HrgaEnhance.Controllers
             }
             catch(Exception e)
             {
+                String Remarks = e.ToString();
                 TempData["notice"] = "Akses anda error";
                 return RedirectToAction("Index", "Login");
             }
