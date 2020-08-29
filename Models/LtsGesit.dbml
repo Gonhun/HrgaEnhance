@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_TAMARA" Class="LtsGesitDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BRCGSQCO401;Initial Catalog=DB_TAMARA;User ID=it_appl_brcg" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_TAMARAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VW_TRAVEL_REQUEST" Member="VW_TRAVEL_REQUESTs">
+    <Type Name="VW_TRAVEL_REQUEST">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NOMOR" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="DEPARTEMEN" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="JABATAN" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="UMUR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="JAM_BERANGKAT" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="DARI" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TUJUAN" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="KETERANGAN" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="STATUS_KELUARGA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NO_HP" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="AKOMODASI_TRANSPORT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AKOMODASI_MESS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AKOMODASI_TIKET" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDFLIGHT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DIBUAT_OLEH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TANGGAL_TRAVEL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TANGGAL_KEMBALI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KEPERLUAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="STATUS_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AWALST" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AKHIRST" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SARANA_REGULER" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SARANA_REGULER_DESC" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="PRIORITAS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_TRAVEL_REQUEST" Member="TBL_T_TRAVEL_REQUESTs">
+    <Type Name="TBL_T_TRAVEL_REQUEST">
+      <Column Name="ID_REQUEST" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMOR" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="STATUS_KELUARGA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UMUR" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NO_HP" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="KEPERLUAN" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="AREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DARI" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TUJUAN" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="JAM_BERANGKAT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TANGGAL_KEMBALI" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DARI_KEMBALI" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TUJUAN_KEMBALI" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="JAM_KEMBALI" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="AKOMODASI_TRANSPORT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AKOMODASI_MESS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SARANA_REGULER" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IDFLIGHT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="INSERTBY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="INSERTDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATEBY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LASTUPDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

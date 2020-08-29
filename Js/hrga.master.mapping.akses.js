@@ -80,18 +80,18 @@ function loadGridAkses() {
                         PROFILE_NAME: { type: "string", editable: true },
                         MENU_PID: { type: "string", editable: true },
                         MENU_DESC: { type: "string", editable: true },
-                        C: { type: "bool", editable: true },
-                        R: { type: "bool", editable: true },
-                        U: { type: "bool", editable: true },
-                        D: { type: "bool", editable: true }
+                        CR: { type: "boolean", editable: true },
+                        RD: { type: "boolean", editable: true },
+                        UP: { type: "boolean", editable: true },
+                        DE: { type: "boolean", editable: true }
                         //REMARKS_UPLOAD: { type: "string", editable: false }
                     }
                 }
             },
             pageSize: 31,
             serverPaging: true,
-            serverFiltering: true,
-            serverSorting: true,
+            serverFiltering: false,
+            serverSorting: false,
 
         },
         editable: "inline",
@@ -128,22 +128,38 @@ function loadGridAkses() {
                 field: "MENU_PID", title: "Menu", template: "#= MENU_DESC #", width: 25, editor: dropDownMenu
             },
             {
-                field: "C", title: "Create", width: 10
+                field: "CR", title: "Create", width: 10, template: "#= CR == true ? 'Yes' : 'No'#", editor: CBoolEditor
             },
             {
-                field: "R", title: "Read", width: 10
+                field: "RD", title: "Read", width: 10, template: "#= RD == true ? 'Yes' : 'No'#", editor: RBoolEditor
             },
             {
-                field: "U", title: "Update", width: 10
+                field: "UP", title: "Update", width: 10, template: "#= UP == true ? 'Yes' : 'No'#", editor: UBoolEditor
             },
             {
-                field: "D", title: "Delete", width: 10
+                field: "DE", title: "Delete", width: 10, template: "#= DE == true ? 'Yes' : 'No'#", editor: DBoolEditor
             },
         ],
         dataBinding: function () {
             window.rowNo = (this.dataSource.page() - 1) * this.dataSource.pageSize();
         }
     });
+}
+
+function CBoolEditor(container, options) {
+    $('<input type="checkbox"  name="CR" id="CR"  data-type="boolean" data-bind="checked:CR"><label for="CR"></label>').appendTo(container);
+}
+
+function RBoolEditor(container, options) {
+    $('<input type="checkbox" name="RD" id="RD"  data-type="boolean" data-bind="checked:RD"><label for="RD"></label>').appendTo(container);
+}
+
+function UBoolEditor(container, options) {
+    $('<input type="checkbox" name="UP" id="UP"  data-type="boolean" data-bind="checked:UP"><label for="UP"></label>').appendTo(container);
+}
+
+function DBoolEditor(container, options) {
+    $('<input type="checkbox" name="DE" id="DE"  data-type="boolean" data-bind="checked:DE"><label for="DE"></label>').appendTo(container);
 }
 
 function dropDownProfile(container, options) {

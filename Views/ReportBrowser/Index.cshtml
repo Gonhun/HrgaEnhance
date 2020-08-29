@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<h2>Report Browser</h2>
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="row clearfix">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="body">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <form class="form-horizontal">
+                            <iframe id="iFrameReport" class="form-body" style="width:100%; height:800px "></iframe>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var iframe = document.getElementById("iFrameReport");
+    iframe.src = $('#urlPath').val() + "/Report/RptBrowser.aspx";
+</script>
+
+

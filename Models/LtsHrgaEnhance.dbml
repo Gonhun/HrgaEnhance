@@ -144,21 +144,6 @@
       <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.TBL_R_MAPPING_AKSES" Member="TBL_R_MAPPING_AKSEs">
-    <Type Name="TBL_R_MAPPING_AKSE">
-      <Column Name="PID_MAPPING_AKSES" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
-      <Column Name="MENU_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="C" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="R" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="U" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="D" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TBL_M_PROFILE" Member="TBL_M_PROFILEs">
     <Type Name="TBL_M_PROFILE">
       <Column Name="PID_MAPPING_PROFILE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -209,6 +194,96 @@
       <Column Name="POSITON_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Tbl_Dept" Member="Tbl_Depts">
+    <Type Name="Tbl_Dept">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Dept" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AccCode" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_POH" Member="TBL_R_POHs">
+    <Type Name="TBL_R_POH">
+      <Column Name="Poh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kota" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Perjalanan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_MARITAL_STATUS" Member="TBL_R_MARITAL_STATUS">
+    <Type Name="TBL_R_MARITAL_STATUS">
+      <Column Name="MARITAL_CODE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MARITAL_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_R_POH" Member="VW_R_POHs">
+    <Type Name="VW_R_POH">
+      <Column Name="POINT_OF_HIRE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="POINT_OF_HIRE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_BANK" Member="TBL_R_BANKs">
+    <Type Name="TBL_R_BANK">
+      <Column Name="NAMA_BANK" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_REPORT_CATEGORY" Member="TBL_R_REPORT_CATEGORies">
+    <Type Name="TBL_R_REPORT_CATEGORY">
+      <Column Name="REPORT_CATEGORY" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="REPORT_CATEGORY_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_MAPPING_REPORT" Member="TBL_M_MAPPING_REPORTs">
+    <Type Name="TBL_M_MAPPING_REPORT">
+      <Column Name="REPORT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PID_MAPPING_REPORT" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_M_MAPPING_REPORT" Member="VW_M_MAPPING_REPORTs">
+    <Type Name="VW_M_MAPPING_REPORT">
+      <Column Name="PID_MAPPING_REPORT" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="REPORT_ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="REPORT_NAME" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_SERVER" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_PATH" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="REPORT_CATEGORY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_KOMPENSASI" Member="TBL_M_KOMPENSASIs">
+    <Type Name="TBL_M_KOMPENSASI">
+      <Column Name="PID_KOMPENSASI" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NOMOR_ST" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TANGGAL" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SHIFT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ABSEN_IN" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ABSEN_OUT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STATUS_KOMP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_R_MAPPING_AKSES" Member="TBL_R_MAPPING_AKSEs">
+    <Type Name="TBL_R_MAPPING_AKSE">
+      <Column Name="PID_MAPPING_AKSES" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID_PROFILE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MENU_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CR" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="RD" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UP" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.VW_R_MAPPING_AKSES" Member="VW_R_MAPPING_AKSEs">
     <Type Name="VW_R_MAPPING_AKSE">
       <Column Name="PID_MAPPING_AKSES" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -216,11 +291,107 @@
       <Column Name="PROFILE_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MENU_PID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MENU_DESC" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="C" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="R" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="U" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="D" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CR" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="RD" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UP" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DE" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
       <Column Name="MENU_LINK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_R_KOMPENSASI" Member="VW_R_KOMPENSASIs">
+    <Type Name="VW_R_KOMPENSASI">
+      <Column Name="STATUS_KOMP" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_keterangan_Cuti" Member="tbl_keterangan_Cutis">
+    <Type Name="tbl_keterangan_Cuti">
+      <Column Name="id" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_M_KOMPENSASI" Member="VW_M_KOMPENSASIs">
+    <Type Name="VW_M_KOMPENSASI">
+      <Column Name="Nrp" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shift" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[in]" Member="in" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Absent" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS_KOMP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PID_KOMPENSASI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblFlightNew" Member="tblFlightNews">
+    <Type Name="tblFlightNew">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NomorST" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Umur" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tanggal" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Dari" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tujuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Maskapai" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Berangkat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="BebanKepada" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TravelAuthorizeNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Plane" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="KodeBooking" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NomorTiket" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="JamBerangkat" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Site" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="StatusSentToSO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StatusOrder" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GAnonGA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NoTelp" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NomorSetTiket" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Area" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Fortiket" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="waktu" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="isBiding" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="isCancel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="InputBy" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ReplTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Kelas" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CREATED_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CREATED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_SUTU" Member="vw_SUTUs">
+    <Type Name="vw_SUTU">
+      <Column Name="NomorST" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nama" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Golongan_Inisial" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nrp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tglST" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Jabatan" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Keterangan" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Departemen" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Tujuan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Awal" Type="System.String" DbType="VarChar(66)" CanBeNull="true" />
+      <Column Name="Akhir" Type="System.String" DbType="VarChar(66)" CanBeNull="true" />
+      <Column Name="Keperluan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="akhirst" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="awalst" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="induksi" Type="System.String" DbType="VarChar(19) NOT NULL" CanBeNull="false" />
+      <Column Name="CutiKhusus" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Golongan" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="BKM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Mulai" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Berakhir" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Hari" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mess" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="No_Kamar" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Catatan" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="awal_ori" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="JenisCNC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
   <Function Name="dbo.cufnGetMenuHrga" Method="cufnGetMenuHrga" IsComposable="true">

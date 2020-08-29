@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div class="row clearfix">
+<div class="row clearfix" id="formKaryawan" style="font-size:small;">
     <div class="col-sm-12">
         <div class="card">
             <div class="header">
@@ -49,7 +49,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputNama" placeholder="isi Nama">
+                                    <input type="text" class="form-control inputAll" id="inputNama" placeholder="isi Nama">
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputTempatLahir" placeholder="isi Tempat Lahir">
+                                    <input type="text" class="form-control inputAll" id="inputTempatLahir" placeholder="isi Tempat Lahir">
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTempatLahir" placeholder="isi Tanggal Lahir">
+                                    <input type="text" class="form-control date inputAll" id="inputTglLahir" placeholder="isi Tanggal Lahir">
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,11 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputJnsKelamin" placeholder="isi Jns Kelamin">
+                                    <select class="form-control show-tick inputAll" id="inputJnsKelamin">
+                                        <option value="">PILIH---</option>
+                                        <option value="M">Laki-Laki</option>
+                                        <option value="F">Perempuan</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -95,7 +99,13 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputGolDarah" placeholder="isi Gol Darah">
+                                    <select class="form-control show-tick inputAll" id="inputGolDarah">
+                                        <option value="">PILIH---</option>
+                                        <option value="O">O</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="AB">AB</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +116,11 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputStatusKawin" placeholder="isi Status Kawin">
+                                    <select class="form-control show-tick inputAll" id="inputStatusKawin">
+                                        <option value="">PILIH---</option>
+                                        <option value="S">Lajang</option>
+                                        <option value="M">Menikah</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +131,14 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputAgama" placeholder="isi Agama">
+                                    <select class="form-control show-tick inputAll" id="inputAgama">
+                                        <option value="">PILIH---</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Katolik">Katolik</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Budha">Budha</option>
+                                        <option value="Protestan">Protestan</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +151,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputPendidikan" placeholder="isi Pendidikan">
+                                    <input type="text" class="form-control inputAll" id="inputPendidikan" placeholder="isi Pendidikan">
                                 </div>
                             </div>
                         </div>
@@ -141,7 +162,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputAlamatTinggal" placeholder="isi Alamat Tinggal">
+                                    <input type="text" class="form-control inputAll" id="inputAlamatTinggal" placeholder="isi Alamat Tinggal">
                                 </div>
                             </div>
                         </div>
@@ -152,7 +173,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputJamsostek" placeholder="isi Jamsostek">
+                                    <input type="text" class="form-control inputAll" id="inputJamsostek" placeholder="isi Jamsostek">
                                 </div>
                             </div>
                         </div>
@@ -163,7 +184,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputDpa" placeholder="isi DPA">
+                                    <input type="text" class="form-control inputAll" id="inputDpa" placeholder="isi DPA">
                                 </div>
                             </div>
                         </div>
@@ -176,7 +197,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTglMasukPama" placeholder="isi Tgl Masuk Pama">
+                                    <input type="text" class="form-control date inputAll" id="inputTglMasukPama" placeholder="isi Tgl Masuk Pama">
                                 </div>
                             </div>
                         </div>
@@ -187,7 +208,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTglPensiun" placeholder="isi Tgl Pensiun">
+                                    <input type="text" class="form-control date inputAll" id="inputTglPensiun" placeholder="isi Tgl Pensiun">
                                 </div>
                             </div>
                         </div>
@@ -198,7 +219,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTglPromosi" placeholder="isi Tgl Promosi">
+                                    <input type="text" class="form-control date inputAll" id="inputTglPromosi" placeholder="isi Tgl Promosi">
                                 </div>
                             </div>
                         </div>
@@ -209,7 +230,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputGolongan" placeholder="isi Golongan">
+                                    <input type="text" class="form-control inputAll" id="inputGolongan" placeholder="isi Golongan">
                                 </div>
                             </div>
                         </div>
@@ -222,7 +243,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputIDJabatan" placeholder="isi jabatan">
+                                    <input type="text" class="form-control inputAll" id="inputIDJabatan" placeholder="isi jabatan">
                                 </div>
                             </div>
                         </div>
@@ -233,7 +254,7 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTglMutasi" placeholder="isi tgl mutasi">
+                                    <input type="text" class="form-control date inputAll" id="inputTglMutasi" placeholder="isi tgl mutasi">
                                 </div>
                             </div>
                         </div>
@@ -244,7 +265,17 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputStatusKeluarga" placeholder="isi status keluarga">
+                                    <select class="form-control show-tick inputAll" id="inputStatusKeluarga">
+                                        <option value="">PILIH---</option>
+                                        <option value="S/0">S/0</option>
+                                        <option value="S/1">S/1</option>
+                                        <option value="S/2">S/2</option>
+                                        <option value="S/3">S/3</option>
+                                        <option value="M/0">M/0</option>
+                                        <option value="M/1">M/1</option>
+                                        <option value="M/2">M/2</option>
+                                        <option value="M/3">M/3</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +286,11 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control" id="inputStatusBawaKeluarga" placeholder="isi status bawa keluarga">
+                                    <select class="form-control show-tick inputAll" id="inputStatusBawaKeluarga">
+                                        <option value="">PILIH---</option>
+                                        <option value=true>Bawa</option>
+                                        <option value=false>TidakBawa</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -268,8 +303,221 @@
                                     <i class="glyphicon glyphicon-pencil"></i>
                                 </span>
                                 <div class="form-line">
-                                    <input type="text" class="form-control date" id="inputTglBawaKeluarga" placeholder="isi tgl bawa keluarga">
+                                    <input type="text" class="form-control date inputAll" id="inputTglBawaKeluarga" placeholder="isi tgl bawa keluarga">
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Departemen</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputDepartemen">
+                                        <option value="">PILIH---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Status Penerimaan</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputStatusPenerimaan">
+                                        <option value="">PILIH---</option>
+                                        <option value="KIRIMAN">KIRIMAN</option>
+                                        <option value="LOKAL">LOKAL</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>POH</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputPOH">
+                                        <option value="">PILIH---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Telepon</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputTelepon" placeholder="isi Telepon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Lokasi</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputLokasi" placeholder="isi Lokasi">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>OnSite</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputOnSite">
+                                        <option value="">PILIH---</option>
+                                        <option value=true>OnSite</option>
+                                        <option value=false>OffSite</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Company</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputCompany">
+                                        <option value="">PILIH---</option>
+                                        <option value="PAMA">PAMA</option>
+                                        <option value="TSA">TSA</option>
+                                        <option value="SKS">SKS</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Rekening</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputRekening" placeholder="isi No Rekening">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Pemilik Rekening</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputPemilikRekening" placeholder="isi Nama Pemilik">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Bank</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputKodeBank">
+                                        <option value="">PILIH---</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>KTP</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputKTP" placeholder="isi No Ktp">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>NPWP</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputNPWP" placeholder="isi No NPWP">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Email</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil inputAll"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputEmail" placeholder="isi Email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <b>Telp W.A</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <input type="text" class="form-control inputAll" id="inputTelpWa" placeholder="isi Telp W.A">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <b>Hari Ke 7</b>
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </span>
+                                <div class="form-line">
+                                    <select class="form-control show-tick inputAll" id="inputHariKe7">
+                                        <option value="">PILIH---</option>
+                                        <option value="Minggu">Minggu</option>
+                                        <option value="Senin">Senin</option>
+                                        <option value="Selasa">Selasa</option>
+                                        <option value="Rabu">Rabu</option>
+                                        <option value="Kamis">Kamis</option>
+                                        <option value="Jumat">Jumat</option>
+                                        <option value="Sabtu">Sabtu</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <b>&nbsp;</b>
+                            <div class="input-group">
+                                <button class="btn btn-md btn-info" type="button" onclick="saveData()"> Simpan</button>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <b>&nbsp;</b>
+                            <div class="input-group">
+                                <button class="btn btn-md btn-danger" type="button" onclick="resetData()"> Batal</button>
                             </div>
                         </div>
                     </div>
@@ -279,124 +527,7 @@
     </div>
 </div>
 
-<div class="form-horizontal">
-    <div class="form-group">
-        <label for="TglBawaKeluarga" class="col-sm-2 control-label text-right">Tgl Bawa Keluarga</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputTglBawaKeluarga" placeholder="Tgl Bawa Keluarga (yyyy-MM-dd)">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Departemen" class="col-sm-2 control-label text-right">Departemen</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputDepartemen" placeholder="Departemen">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="StatusPenerimaan" class="col-sm-2 control-label text-right">Status Penerimaan</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputStatusPenerimaan" placeholder="Status Penerimaan">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="POH" class="col-sm-2 control-label text-right">POH</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputPOH" placeholder="POH">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Gaji" class="col-sm-2 control-label text-right">Gaji</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputGaji" placeholder="Gaji">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="RateUlap" class="col-sm-2 control-label text-right">Rate Ulap</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputRateUlap" placeholder="Rate Ulap">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Telepon" class="col-sm-2 control-label text-right">Telepon</label>
-        <div class="col-sm-4">
-            <input type="tel" class="k-textbox form-control" id="inputTelepon" placeholder="Telepon">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Lokasi" class="col-sm-2 control-label text-right">Lokasi</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputLokasi" placeholder="Lokasi">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="OnSite" class="col-sm-2 control-label text-right">OnSite</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputOnSite" placeholder="OnSite">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="Rekening" class="col-sm-2 control-label text-right">Rekening</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputRekening" placeholder="Rekening">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="PemilikRekening" class="col-sm-2 control-label text-right">)Pemilik Rekening</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputPemilikRekening" placeholder="Pemilik Rekening">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">Kode Bank</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputKodeBank" placeholder="Kode Bank">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">Status Pekerjaan</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputStatusPekerjaan" placeholder="Status Pekerjaan">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">Company</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputCompany" placeholder="Company" value="PAMA" disabled>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">Hari ke 7</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputHariKe7" placeholder="Hari ke 7">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">KTP</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputKTP" placeholder="No Ktp">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">NPWP</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputNPWP" placeholder="No NPWP">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">EMAIL</label>
-        <div class="col-sm-4">
-            <input type="email" class="k-textbox form-control" id="inputEmail" placeholder="Email">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="KodeBank" class="col-sm-2 control-label text-right">Telepon WA</label>
-        <div class="col-sm-4">
-            <input type="text" class="k-textbox form-control" id="inputTelpWa" placeholder="Telepon WA">
-        </div>
-    </div>
-</div>
-
-<script src="~/Js/hrga.master.karyawan.js"></script>
+<script src="@ViewBag.pathParent/Js/hrga.master.karyawan.js"></script>
 
 @*<script type="text/javascript" charset="utf-8">
 

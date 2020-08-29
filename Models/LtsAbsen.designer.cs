@@ -116,6 +116,22 @@ namespace HrgaEnhance.Models
 			}
 		}
 		
+		public System.Data.Linq.Table<SubRoster> SubRosters
+		{
+			get
+			{
+				return this.GetTable<SubRoster>();
+			}
+		}
+		
+		public System.Data.Linq.Table<VW_R_ROSTER> VW_R_ROSTERs
+		{
+			get
+			{
+				return this.GetTable<VW_R_ROSTER>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SP_ABSENSI_ONLINE")]
 		public int SP_ABSENSI_ONLINE()
 		{
@@ -3256,6 +3272,330 @@ namespace HrgaEnhance.Models
 				if ((this._Aprove_HC_tanggal != value))
 				{
 					this._Aprove_HC_tanggal = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SubRoster")]
+	public partial class SubRoster
+	{
+		
+		private System.Nullable<int> _RosterCode;
+		
+		private string _Shift;
+		
+		private System.Nullable<System.DateTime> _In;
+		
+		private System.Nullable<System.DateTime> _Out;
+		
+		private System.Nullable<System.DateTime> _JamKerja;
+		
+		private System.Nullable<int> _GrpShift;
+		
+		private System.Nullable<int> _Rest;
+		
+		private System.Nullable<int> _RestJumat;
+		
+		public SubRoster()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RosterCode", DbType="Int")]
+		public System.Nullable<int> RosterCode
+		{
+			get
+			{
+				return this._RosterCode;
+			}
+			set
+			{
+				if ((this._RosterCode != value))
+				{
+					this._RosterCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Shift", DbType="NVarChar(1)")]
+		public string Shift
+		{
+			get
+			{
+				return this._Shift;
+			}
+			set
+			{
+				if ((this._Shift != value))
+				{
+					this._Shift = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[In]", Storage="_In", DbType="DateTime")]
+		public System.Nullable<System.DateTime> In
+		{
+			get
+			{
+				return this._In;
+			}
+			set
+			{
+				if ((this._In != value))
+				{
+					this._In = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Out", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Out
+		{
+			get
+			{
+				return this._Out;
+			}
+			set
+			{
+				if ((this._Out != value))
+				{
+					this._Out = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JamKerja", DbType="DateTime")]
+		public System.Nullable<System.DateTime> JamKerja
+		{
+			get
+			{
+				return this._JamKerja;
+			}
+			set
+			{
+				if ((this._JamKerja != value))
+				{
+					this._JamKerja = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GrpShift", DbType="Int")]
+		public System.Nullable<int> GrpShift
+		{
+			get
+			{
+				return this._GrpShift;
+			}
+			set
+			{
+				if ((this._GrpShift != value))
+				{
+					this._GrpShift = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rest", DbType="Int")]
+		public System.Nullable<int> Rest
+		{
+			get
+			{
+				return this._Rest;
+			}
+			set
+			{
+				if ((this._Rest != value))
+				{
+					this._Rest = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RestJumat", DbType="Int")]
+		public System.Nullable<int> RestJumat
+		{
+			get
+			{
+				return this._RestJumat;
+			}
+			set
+			{
+				if ((this._RestJumat != value))
+				{
+					this._RestJumat = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.VW_R_ROSTER")]
+	public partial class VW_R_ROSTER
+	{
+		
+		private int _RosterCode;
+		
+		private string _Dept;
+		
+		private string _Shift;
+		
+		private System.Nullable<System.DateTime> _In;
+		
+		private System.Nullable<System.DateTime> _Out;
+		
+		private System.Nullable<System.DateTime> _JamKerja;
+		
+		private System.Nullable<int> _GrpShift;
+		
+		private System.Nullable<int> _Rest;
+		
+		private System.Nullable<int> _RestJumat;
+		
+		public VW_R_ROSTER()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RosterCode", DbType="Int NOT NULL")]
+		public int RosterCode
+		{
+			get
+			{
+				return this._RosterCode;
+			}
+			set
+			{
+				if ((this._RosterCode != value))
+				{
+					this._RosterCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dept", DbType="NVarChar(50)")]
+		public string Dept
+		{
+			get
+			{
+				return this._Dept;
+			}
+			set
+			{
+				if ((this._Dept != value))
+				{
+					this._Dept = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Shift", DbType="NVarChar(1)")]
+		public string Shift
+		{
+			get
+			{
+				return this._Shift;
+			}
+			set
+			{
+				if ((this._Shift != value))
+				{
+					this._Shift = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[In]", Storage="_In", DbType="DateTime")]
+		public System.Nullable<System.DateTime> In
+		{
+			get
+			{
+				return this._In;
+			}
+			set
+			{
+				if ((this._In != value))
+				{
+					this._In = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Out", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Out
+		{
+			get
+			{
+				return this._Out;
+			}
+			set
+			{
+				if ((this._Out != value))
+				{
+					this._Out = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JamKerja", DbType="DateTime")]
+		public System.Nullable<System.DateTime> JamKerja
+		{
+			get
+			{
+				return this._JamKerja;
+			}
+			set
+			{
+				if ((this._JamKerja != value))
+				{
+					this._JamKerja = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GrpShift", DbType="Int")]
+		public System.Nullable<int> GrpShift
+		{
+			get
+			{
+				return this._GrpShift;
+			}
+			set
+			{
+				if ((this._GrpShift != value))
+				{
+					this._GrpShift = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rest", DbType="Int")]
+		public System.Nullable<int> Rest
+		{
+			get
+			{
+				return this._Rest;
+			}
+			set
+			{
+				if ((this._Rest != value))
+				{
+					this._Rest = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RestJumat", DbType="Int")]
+		public System.Nullable<int> RestJumat
+		{
+			get
+			{
+				return this._RestJumat;
+			}
+			set
+			{
+				if ((this._RestJumat != value))
+				{
+					this._RestJumat = value;
 				}
 			}
 		}

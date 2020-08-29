@@ -172,6 +172,31 @@
       <Column Name="Aprove_HC_tanggal" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SubRoster" Member="SubRosters">
+    <Type Name="SubRoster">
+      <Column Name="RosterCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="[In]" Member="In" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JamKerja" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GrpShift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RestJumat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_R_ROSTER" Member="VW_R_ROSTERs">
+    <Type Name="VW_R_ROSTER">
+      <Column Name="RosterCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dept" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="[In]" Member="In" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Out" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="JamKerja" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="GrpShift" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Rest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RestJumat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.SP_ABSENSI_ONLINE" Method="SP_ABSENSI_ONLINE">
     <Return Type="System.Int32" />
   </Function>

@@ -166,7 +166,7 @@ function loadGridAbsen() {
             }
         },
         //toolbar: [{ template: '<label class="control-label">Cari Berdasarkan : </label>&nbsp;<input id="cmbCari" name="cmbCari" />' }],
-        toolbar: [{ template: '<a href=' + $("#urlPath").val() + '"Csv/Absen/Template/Contoh Upload Absen.csv" id="btn_template" class="k-button"><span class="glyphicon glyphicon-download"></span> Download Template</a>' }],
+        toolbar: [{ template: '<a href=' + $("#urlPath").val() + '"/Csv/Absen/Template/Contoh Upload Absen.csv" id="btn_template" class="k-button"><span class="glyphicon glyphicon-download"></span> Download Template</a>' }],
         columns: [
             {
                 command: [
@@ -229,6 +229,7 @@ function loadGridAbsen() {
                 e.container.find("input[name='nrp'").css("background", "gainsboro")
 
                 e.container.find("input[name='tanggal'").attr("disabled", true)
+                e.container.find("input[name='tanggal'").data("kendoDateTimePicker").enable(false);
                 e.container.find("input[name='tanggal'").css("background", "gainsboro")
 
                 e.container.find("input[name='shift'").attr("disabled", true)

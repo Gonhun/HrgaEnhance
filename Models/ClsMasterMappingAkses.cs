@@ -35,10 +35,10 @@ namespace HrgaEnhance.Models
                 iTbl.PID_MAPPING_AKSES = System.Guid.NewGuid().ToString();
                 iTbl.ID_PROFILE = sClsAkses.ID_PROFILE;
                 iTbl.MENU_PID = sClsAkses.MENU_PID;
-                iTbl.C = sClsAkses.C;
-                iTbl.R = sClsAkses.R;
-                iTbl.U = sClsAkses.U;
-                iTbl.D = sClsAkses.D;
+                iTbl.CR = sClsAkses.CR;
+                iTbl.RD = sClsAkses.RD;
+                iTbl.UP = sClsAkses.UP;
+                iTbl.DE = sClsAkses.DE;
                 iTbl.CREATED_BY = iStrSessNrp;
                 iTbl.CREATE_DATE = System.DateTime.Now;
 
@@ -64,10 +64,10 @@ namespace HrgaEnhance.Models
                 TBL_R_MAPPING_AKSE iTbl = dataContext.TBL_R_MAPPING_AKSEs.Where(k => k.PID_MAPPING_AKSES.Equals(sClsAkses.PID_MAPPING_AKSES)).FirstOrDefault();
                 iTbl.ID_PROFILE = sClsAkses.ID_PROFILE;
                 iTbl.MENU_PID = sClsAkses.MENU_PID;
-                iTbl.C = sClsAkses.C;
-                iTbl.R = sClsAkses.R;
-                iTbl.U = sClsAkses.U;
-                iTbl.D = sClsAkses.D;
+                iTbl.CR = sClsAkses.CR;
+                iTbl.RD = sClsAkses.RD;
+                iTbl.UP = sClsAkses.UP;
+                iTbl.DE = sClsAkses.DE;
                 iTbl.CREATED_BY = iStrSessNrp;
                 iTbl.CREATE_DATE = System.DateTime.Now;
 

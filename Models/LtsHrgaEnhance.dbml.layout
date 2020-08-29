@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.125, 13" name="LtsHrgaEnhance">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 18, 24.25" name="LtsHrgaEnhance">
   <DataContextMoniker Name="/LtsHrgaEnhanceDataContext" />
   <nestedChildShapes>
     <classShape Id="439f96e9-eb23-4850-a126-8fa28f2df2bc" absoluteBounds="0.75, 0.75, 2, 11.962872721354165">
@@ -14,64 +14,148 @@
         <elementListCompartment Id="cdab35fa-f7a3-4f15-be87-a2f1978e6819" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 10.825968424479166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="7c3a08f1-bb2b-4d4b-ba49-12418b3e6fdb" absoluteBounds="6.75, 0.75, 2, 1.7708968098958327">
+    <classShape Id="7c3a08f1-bb2b-4d4b-ba49-12418b3e6fdb" absoluteBounds="6.75, 0.75, 2, 1.7708968098958309">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_M_PROFILE" />
       <nestedChildShapes>
-        <elementListCompartment Id="211175e2-081e-489e-a724-3cc49750d207" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="211175e2-081e-489e-a724-3cc49750d207" absoluteBounds="6.7650000000000006, 1.2100000000000009, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="8d381c10-df65-44da-960b-19e551b0f9b5" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_R_POSITION" />
       <nestedChildShapes>
-        <elementListCompartment Id="8f67e70f-8a6e-4b7b-9560-1e11839def0d" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f67e70f-8a6e-4b7b-9560-1e11839def0d" absoluteBounds="6.7650000000000006, 4.2100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="0fc97ec6-17be-4b2b-a923-83b3d98ed4a4" absoluteBounds="6.75, 6.75, 2, 1.1939925130208327">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_R_PROFILE" />
       <nestedChildShapes>
-        <elementListCompartment Id="85bde2b4-86bc-4ea6-a193-abadf3418537" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="85bde2b4-86bc-4ea6-a193-abadf3418537" absoluteBounds="6.7650000000000006, 7.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="137394ef-5a79-4f78-8e1f-628766038d81" absoluteBounds="6.75, 8.75, 2, 2.9247054036458309">
-      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_MAPPING_AKSE" />
-      <nestedChildShapes>
-        <elementListCompartment Id="b91d0714-7981-4b91-b995-27bf84934a99" absoluteBounds="6.765, 9.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="115dc102-c2d9-4ca8-b47b-18bba12ab40c" absoluteBounds="9.75, 0.75, 2, 1.7708968098958327">
+    <classShape Id="115dc102-c2d9-4ca8-b47b-18bba12ab40c" absoluteBounds="6.75, 8.75, 2, 1.7708968098958309">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_M_PROFILE" />
       <nestedChildShapes>
-        <elementListCompartment Id="3c32c169-8987-40a6-9946-40fe64ef1706" absoluteBounds="9.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3c32c169-8987-40a6-9946-40fe64ef1706" absoluteBounds="6.7650000000000006, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="da44ed5e-eb61-46f2-a1dd-0abd0e3eaa88" absoluteBounds="9.75, 3.75, 2, 2.3478011067708344">
+    <classShape Id="da44ed5e-eb61-46f2-a1dd-0abd0e3eaa88" absoluteBounds="9.75, 0.75, 2, 2.3478011067708344">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_M_MENU" />
       <nestedChildShapes>
-        <elementListCompartment Id="9fa69b75-5a78-44d2-b817-2511d01005a2" absoluteBounds="9.765, 4.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9fa69b75-5a78-44d2-b817-2511d01005a2" absoluteBounds="9.765, 1.2100000000000009, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="81e42937-75a1-47c1-aef3-690bc81fd030" absoluteBounds="9.75, 7.75, 2, 1.1939925130208344">
+    <classShape Id="81e42937-75a1-47c1-aef3-690bc81fd030" absoluteBounds="9.75, 4.75, 2, 1.1939925130208344">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_PROFILE" />
       <nestedChildShapes>
-        <elementListCompartment Id="87e18cc4-e317-4356-a3b6-123c5412cebb" absoluteBounds="9.765, 8.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="87e18cc4-e317-4356-a3b6-123c5412cebb" absoluteBounds="9.765, 5.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="99e667f2-61be-4c4c-904e-462c6d7a9f4f" absoluteBounds="9.75, 9.75, 2, 1.9631982421874987">
+    <classShape Id="99e667f2-61be-4c4c-904e-462c6d7a9f4f" absoluteBounds="9.75, 6.75, 2, 1.9631982421874987">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_M_REPORT" />
       <nestedChildShapes>
-        <elementListCompartment Id="9173fdb7-6513-487c-abe2-ba68d65c55d8" absoluteBounds="9.765, 10.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="9173fdb7-6513-487c-abe2-ba68d65c55d8" absoluteBounds="9.765, 7.2100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="a4c87406-d23b-4368-ba70-91b14db7e3f9" absoluteBounds="12.75, 0.75, 2, 2.5401025390625005">
+    <classShape Id="a4c87406-d23b-4368-ba70-91b14db7e3f9" absoluteBounds="9.75, 9.75, 2, 2.5401025390625023">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_M_MENU" />
       <nestedChildShapes>
-        <elementListCompartment Id="d1b75a0c-8dbf-44c5-8d28-078828057aa9" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d1b75a0c-8dbf-44c5-8d28-078828057aa9" absoluteBounds="9.765, 10.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="5860a72b-8eec-4ee5-a3cc-1a8d3862c24c" absoluteBounds="12.875, 4, 2, 2.7324039713541666">
+    <classShape Id="8a47bc6e-6dde-4af4-8c84-1bbeea06aba3" absoluteBounds="12.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/Tbl_Dept" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd0ce0e8-3d7a-4380-b1ce-f80792bf3d4c" absoluteBounds="12.765, 1.2100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1f526d8-65fa-4ce1-b28a-4833fcef6689" absoluteBounds="12.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_POH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb169006-8ddd-42d1-90fe-a130286540b7" absoluteBounds="12.765, 4.2100000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c38b6911-df38-49f6-9aef-5a1d0a2ef143" absoluteBounds="12.75, 6.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_MARITAL_STATUS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1af76610-8a5f-453b-bced-db0fcfc42586" absoluteBounds="12.765, 7.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="727e80a2-0f03-4485-b636-aac352f9cf8d" absoluteBounds="12.75, 8.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_R_POH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac1a3ae7-a2c2-437a-b574-7ee82d27b06e" absoluteBounds="12.765, 9.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c2c96f5e-d524-49be-b5b9-b82dab7af2cd" absoluteBounds="12.75, 10.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_BANK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb12a298-cb4f-456c-a5e0-e182c4b4bf92" absoluteBounds="12.765, 11.21, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2ae4d6b-a433-4bf2-a1f9-99950eb15fde" absoluteBounds="12.75, 12.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_REPORT_CATEGORY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="af8ac056-1712-4e2a-ba3b-5e01d5714d7b" absoluteBounds="12.765, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5efebe3e-9408-4d6b-9ed8-0a0deca8af52" absoluteBounds="0.75, 13.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_M_MAPPING_REPORT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dbb42ad-0e27-4448-9b76-15c2046b6390" absoluteBounds="0.76500000000000057, 14.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8ed9e6c-66c2-4b5f-b667-ec6671e04c37" absoluteBounds="3.75, 13.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_M_MAPPING_REPORT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6d6e4a7-05a2-4bd2-81c4-b94516c3e87e" absoluteBounds="3.7650000000000006, 14.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f1e4a66-ef94-4d01-b5bd-34f5485326fd" absoluteBounds="6.75, 13.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_M_KOMPENSASI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81e6ba5d-14fe-4948-934c-c68db7baf217" absoluteBounds="6.7650000000000006, 14.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4fb5b83f-0ae5-42ca-b786-f8b89ac346cd" absoluteBounds="9.75, 14.75, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/TBL_R_MAPPING_AKSE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c0fb19b-03e1-428e-bf3c-cc6b3c08a3b5" absoluteBounds="9.765, 15.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec5b36a7-82c7-4282-b7c2-5eaa55cc870a" absoluteBounds="12.75, 14.75, 2, 2.7324039713541666">
       <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_R_MAPPING_AKSE" />
       <nestedChildShapes>
-        <elementListCompartment Id="5e95acb0-abd0-422c-8d85-0cc85974daa2" absoluteBounds="12.89, 4.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="f47d81b9-ccb9-4fa7-8371-53b7885e3487" absoluteBounds="12.765, 15.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="559b1761-0e10-424e-bc9d-5682f050d170" absoluteBounds="15.75, 0.75, 2, 1.0016910807291666">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_R_KOMPENSASI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9461f52d-ed0b-4ab6-acce-ffa5738cda66" absoluteBounds="15.765, 1.2100000000000009, 1.9700000000000002, 0.44169108072916669" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="62625123-38f8-472a-8544-e9fa79fa07b2" absoluteBounds="15.75, 2.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/tbl_keterangan_Cuti" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b6a1ee12-abaf-4667-8418-c3651484b3c7" absoluteBounds="15.765, 3.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b19eee7-d080-4038-b42a-9a50eab69e0d" absoluteBounds="15.75, 4.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/VW_M_KOMPENSASI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3664b006-d61f-45c1-af41-dfc08d5b02a8" absoluteBounds="15.765, 5.2100000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ce9f1527-3772-40e5-a13f-e5942d25b0b6" absoluteBounds="15.75, 8.75, 2, 7.7322412109375023">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/tblFlightNew" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1262cbd-5788-4cbb-9f09-a5ff217acc60" absoluteBounds="15.765, 9.21, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f4d0d6a-89f5-40fa-bfa5-7e873c0162b6" absoluteBounds="0.75, 17.75, 2, 6.1938297526041666">
+      <DataClassMoniker Name="/LtsHrgaEnhanceDataContext/vw_SUTU" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd958180-fa02-40fd-8bfc-7c1c4eef20e1" absoluteBounds="0.76500000000000057, 18.21, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

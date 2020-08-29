@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using HrgaEnhance.Models;
+using Microsoft.Ajax.Utilities;
 
 namespace HrgaEnhance.Models
 {
@@ -16,6 +17,30 @@ namespace HrgaEnhance.Models
         {
             LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
             return dataContext.tblKaryawans;
+        }
+
+        public IQueryable<Tbl_Dept> getDept()
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.Tbl_Depts;
+        }
+
+        public IQueryable<VW_R_POH> getPOH()
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.VW_R_POHs;
+        }
+
+        public IQueryable<TBL_R_MARITAL_STATUS> getMarital()
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.TBL_R_MARITAL_STATUS;
+        }
+
+        public IQueryable<TBL_R_BANK> getBank()
+        {
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            return dataContext.TBL_R_BANKs;
         }
 
         public ClsParameter.Karyawan getKaryawanEllipse(string sParameter)
@@ -86,7 +111,7 @@ namespace HrgaEnhance.Models
 
                 return parameter;
             }
-            else
+            else if(vW_R !=  null)
             {
                 parameter.Nrp = sParameter;
                 parameter.Nama = vW_R.NAME;
@@ -146,6 +171,83 @@ namespace HrgaEnhance.Models
 
                 return parameter;
             }
+            else
+            {
+                parameter.Nrp = sParameter;
+                parameter.Nama = null;
+                parameter.TempatLahir = null;
+                parameter.TglLahir = null;
+                parameter.JenisKelamin = null;
+                parameter.GolonganDarah = null;
+                parameter.StatusKawin = null;
+                parameter.Agama = null;
+                parameter.Pendidikan = null;
+                parameter.AlamatTinggal = null;
+                parameter.Jamsostek = null;
+                parameter.DPA = null;
+                parameter.TglMasukPama = null;
+                parameter.TglPensiun = null;
+                parameter.Golongan = null;
+                parameter.TglPromosi = null;
+                parameter.IDJabatan = null;
+                parameter.Jabatan = null;
+                parameter.TglMutasi = null;
+                parameter.StatusKeluarga = null;
+                parameter.StatusBawaKeluarga = null;
+                parameter.TglBawaKeluarga = null;
+                parameter.Departemen = null;
+                parameter.StatusPenerimaan = null;
+                parameter.POH = null;
+                parameter.Gaji = null;
+                parameter.RateUlap = null;
+                parameter.Telepon = null;
+                parameter.Lokasi = null;
+                parameter.Approve = null;
+                parameter.SisaCutiPeriode1 = null;
+                parameter.SisaCutiPeriode2 = null;
+                parameter.SisaCutiBesar = null;
+                parameter.OnSite = null;
+                parameter.Rekening = null;
+                parameter.PemilikRekening = null;
+                parameter.KodeBank = null;
+                parameter.StatusPekerjaan = null;
+                parameter.RewardSarana = null;
+                parameter.Company = null;
+                parameter.HariKe7 = null;
+                parameter.RosterCode = null;
+                parameter.SisaUangObat = null;
+                parameter.TglUpdate = null;
+                parameter.updateby = null;
+                parameter.KTP = null;
+                parameter.NPWP = null;
+                parameter.EMAIL = null;
+                parameter.TeleponWA = null;
+                parameter.TanggalUpdateHarike7 = null;
+                parameter.JenisOperator = null;
+                parameter.Mess = null;
+                parameter.No_Kamar = null;
+                parameter.Status_Mess = null;
+                parameter.Keterangan_Mess = null;
+
+                return parameter;
+            }
+        }
+
+        public bool validKaryawan(ClsParameter.Karyawan sClsKaryawan)
+        {
+            bool Status;
+            LtsHrgaEnhanceDataContext dataContext = new LtsHrgaEnhanceDataContext();
+            tblKaryawan iTbl = dataContext.tblKaryawans.Where(j => j.Nrp.Equals(sClsKaryawan.Nrp)).FirstOrDefault();
+            if(iTbl != null)
+            {
+                Status = true;
+            }
+            else
+            {
+                Status = false;
+            }
+
+            return Status;
         }
 
         public bool insertKaryawan(ClsParameter.Karyawan sClsKaryawan)

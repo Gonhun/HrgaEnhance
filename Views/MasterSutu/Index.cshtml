@@ -1,0 +1,581 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+
+<h2>Surat Tugas</h2>
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="row clearfix" style="font-size:small;">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="body">
+                <div class="row clearfix">
+                    <div class="col-md-2">
+                        <b>Jenis Surat</b>
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                            <div class="form-line">
+                                <select class="form-control show-tick inputAll" id="inputJnsSurat">
+                                    <option value="">PILIH---</option>
+                                    <option value="DINAS">DINAS</option>
+                                    <option value="CUTI">CUTI</option>
+                                    <option value="TUGAS">TUGAS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <b>&nbsp;</b>
+                        <button id="btnSearch" type="button" class="btn btn-sm waves-effect"><i class="glyphicon glyphicon-search"></i> Search</button>
+                    </div>
+                </div>
+                <div class="row clearfix" id="sutu" hidden>
+                    <div class="col-lg-12">
+                        <div id="gridSutu" style="width: 100%; font-size:small;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row clearfix" hidden id="inputSurat">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="header">
+                <h2>Input Surat</h2>
+            </div>
+            <div class="body">
+                <div class="demo-masked-input">
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="header bg-green">
+                                    <form class="form-horizontal">
+                                        <div class="row clearfix">
+                                            <div class="col-md-1 form-control-label">
+                                                <label for="email_address_2">Keperluan</label>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group">
+                                                    <div class="form-line">
+                                                        <input type="text" class="form-control" id="inputKeperluan" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="body">
+                                    <div class="row clearfix">
+                                        <div class="col-md-3 all">
+                                            <b>No Surat</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" id="inputSurat" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-3 all">
+                                            <b>Nrp</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control" id="inputNrp" onchange="loadDataKaryawan()" placeholder="isi Nrp">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 all">
+                                            <b>Nama</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control inputAll" id="inputNama" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 all">
+                                            <b>Jabatan</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-briefcase"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control inputAll" id="inputJabatan" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 all">
+                                            <b>Telepon</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-phone"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="number" class="form-control inputAll" id="inputTelepon" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row clearfix">
+                                        <div class="col-md-2 all">
+                                            <b>Status Perkawinan</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-king"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control inputAll" id="inputStatusKawin" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 all">
+                                            <b>Bawa Keluarga</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-queen"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <select class="form-control show-tick inputAll" id="inputStatusBawaKeluarga" disabled>
+                                                        <option value="">PILIH---</option>
+                                                        <option value=true>Bawa</option>
+                                                        <option value=false>TidakBawa</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 all">
+                                            <b>Tujuan</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-plane"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control inputAll" id="inputTujuan" style="text-transform:uppercase;" maxlength="15" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 all">
+                                            <b>Alamat</b>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-home"></i>
+                                                </span>
+                                                <div class="form-line">
+                                                    <input type="text" class="form-control inputAll" id="inputAlamatCuti">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="header bg-blue">
+                                    &nbsp;
+                                </div>
+                                <div class="body">
+                                    <div class="row clearfix">
+                                        <div class="col-md-6">
+                                            <div class="row clearfix">
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Lapangan</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiLapangan">
+                                                            <label for="chkCutiLapangan"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiLapangan" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Perjalanan</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiPerjalanan">
+                                                            <label for="chkCutiPerjalanan"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiPerjalanan" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Tahunan</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiTahunan">
+                                                            <label for="chkCutiTahunan"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiTahunan" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix">
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Besar</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiBesar">
+                                                            <label for="chkCutiBesar"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiBesar" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Pengganti Off</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiPenggantiOff">
+                                                            <label for="chkCutiPenggantiOff"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiPenggantiOff" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-3 cuti">
+                                                    <b>Kompensasi</b>
+                                                    <div class="input-group input-group-sm">
+                                                        <span class="input-group-addon">
+                                                            <input type="checkbox" class="filled-in" id="chkCutiKompensasi">
+                                                            <label for="chkCutiKompensasi"></label>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="number" class="form-control" id="inputCutiKompensasi" min="0" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix">
+                                                <div class="col-sm-10">
+                                                    <div class="card">
+                                                        <div class="header bg-brown">
+                                                            &nbsp;
+                                                        </div>
+                                                        <div class="body">
+                                                            <div class="row clearfix">
+                                                                <div class="col-md-12">
+                                                                    <div class="row clearfix">
+                                                                        <div class="col-md-6 all">
+                                                                            <b>Awal</b>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon">
+                                                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                                                </span>
+                                                                                <div class="form-line">
+                                                                                    <input type="text" class="form-control inputAll" id="inputAwal" placeholder="yyyy-MM-dd" maxlength="10">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6 all">
+                                                                            <b>Akhir</b>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon">
+                                                                                    <i class="glyphicon glyphicon-calendar"></i>
+                                                                                </span>
+                                                                                <div class="form-line">
+                                                                                    <input type="text" class="form-control inputAll" id="inputAkhir" placeholder="yyyy-MM-dd" maxlength="10" disabled>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row clearfix">
+                                                                        <div class="col-md-12 cuti">
+                                                                            <b>Keterangan</b>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon">
+                                                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                                                </span>
+                                                                                <div class="form-line">
+                                                                                    <select class="form-control show-tick inputAll" id="inputKeteranganCuti">
+                                                                                        <option value="">PILIH---</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12 dinas">
+                                                                            <b>Keterangan</b>
+                                                                            <div class="input-group">
+                                                                                <span class="input-group-addon">
+                                                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                                                </span>
+                                                                                <div class="form-line">
+                                                                                    <input type="text" class="form-control inputAll" id="inputKeteranganDinas">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row clearfix cuti">
+                                                <div class="col-sm-6">
+                                                    <b>Periode Cuti Tahunan</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-calendar"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputPeriodeTahunan" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <b>Periode Cuti Besar</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-th-list"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputPeriodeBesar" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix cuti">
+                                                <div class="col-sm-12">
+                                                    <b>Total</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plus"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputTotalPeriode" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix cuti">
+                                                <div class="col-sm-6">
+                                                    <b>Sisa Cuti Tahunan</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-calendar"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputSisaTahunan" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <b>Sisa Cuti Besar</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-th-list"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputSisaBesar" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix cuti">
+                                                <div class="col-sm-12">
+                                                    <b>Total</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plus"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputTotalSisa" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row clearfix cuti">
+                                                <div class="col-sm-3 ">
+                                                    <b>Input Tiket</b>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <input name="inputTiket" type="radio" id="radioTiketYa" onchange="loadFormTiket()" class="with-gap radio-col-red" value=1 />
+                                                    <label for="radioTiketYa">Ya</label>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <input name="inputTiket" type="radio" id="radioTiketTidak" onchange="loadFormTiket()" class="with-gap radio-col-blue" value=0 />
+                                                    <label for="radioTiketTidak">Tidak</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix" id="formTiket" hidden>
+                        <div class="col-sm-6">
+                            <div class="row clearfix" id="flightCuti">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="header bg-cyan">
+                                            <h4>Keberangkatan</h4>
+                                        </div>
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-md-4">
+                                                    <b>Tanggal</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-calendar"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputTglFlightCuti" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <b>Dari</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plane"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control" id="inputBerangkatCuti" style="text-transform:uppercase;" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <b>Tujuan</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plane"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control" id="inputTujuanCuti" style="text-transform:uppercase;" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row clearfix" id="flightDinas">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="header bg-grey">
+                                            <h4>Kepulangan</h4>
+                                        </div>
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-md-4">
+                                                    <b>Tanggal</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-calendar"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control inputAll" id="inputTglFlightDinas" disabled>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <b>Dari</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plane"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control" id="inputBerangkatDinas" style="text-transform:uppercase;" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <b>Tujuan</b>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="glyphicon glyphicon-plane"></i>
+                                                        </span>
+                                                        <div class="form-line">
+                                                            <input type="text" class="form-control" id="inputTujuanDinas" style="text-transform:uppercase;" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row clearfix">
+                        <div class="col-sm-12">
+                            <div class="row clearfix">
+                                <div class="col-sm-8"></div>
+                                <div class="col-md-1">
+                                    <b>&nbsp;</b>
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <button class="btn btn-sm bg-light-green" type="button" onclick="loadSaveSurat()">
+                                                <i class="glyphicon glyphicon-ok"></i> Simpan
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-md-1">
+                                    <b>&nbsp;</b>
+                                    <div class="input-group">
+                                        <div class="form-line">
+                                            <button class="btn btn-sm bg-red" type="button" onclick="resetAll()" id="btnCancel">
+                                                <i class="glyphicon glyphicon-remove"></i> Batal
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row clearfix" >
+    <div class="col-sm-12">
+        <div class="card" id="reportSurat" hidden>
+            <div class="body">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <iframe id="iFrameReport" class="col-sm-11" style="height: 500px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@ViewBag.pathParent/Js/hrga.master.sutu.js"></script>
+

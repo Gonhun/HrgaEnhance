@@ -23,6 +23,7 @@ namespace HrgaEnhance.Controllers
     public class MasterKaryawanController : Controller
     {
         bool Status;
+        bool StatusValid;
         String Remarks;
         private string iStrSessNRP = string.Empty;
         private string iStrSessDistrik = string.Empty;
@@ -38,6 +39,10 @@ namespace HrgaEnhance.Controllers
             else
             {
                 this.pv_CustLoadSession();
+                ClsHome clsHome = new ClsHome();
+                cufnGetMenuHrgaResult menu = clsHome.GetMenu(iStrSessGPID).FirstOrDefault();
+                ViewData["myMenu"] = menu.InnerHTML;
+
                 return View();
             }
         }
@@ -63,7 +68,35 @@ namespace HrgaEnhance.Controllers
         }
 
         [HttpPost]
-        public JsonResult jsonInsertKaryawan(ClsParameter.Karyawan sClsKaryawan)
+        public JsonResult jsonGetDept()
+        {
+            ClsMasterKaryawan cls = new ClsMasterKaryawan();
+            return Json(new { Data = cls.getDept(), Total = cls.getDept().Count() });
+        }
+
+        [HttpPost]
+        public JsonResult jsonGetPOH()
+        {
+            ClsMasterKaryawan cls = new ClsMasterKaryawan();
+            return Json(new { Data = cls.getPOH(), Total = cls.getPOH().Count() });
+        }
+
+        [HttpPost]
+        public JsonResult jsonGetMarital()
+        {
+            ClsMasterKaryawan cls = new ClsMasterKaryawan();
+            return Json(new { Data = cls.getMarital(), Total = cls.getMarital().Count() });
+        }
+
+        [HttpPost]
+        public JsonResult jsonGetBank()
+        {
+            ClsMasterKaryawan cls = new ClsMasterKaryawan();
+            return Json(new { Data = cls.getBank(), Total = cls.getBank().Count() });
+        }
+
+        [HttpPost]
+        public JsonResult jsonValidKaryawan(ClsParameter.Karyawan sClsKaryawan)
         {
             ClsMasterKaryawan cls = new ClsMasterKaryawan();
             try
@@ -74,14 +107,30 @@ namespace HrgaEnhance.Controllers
                 }
                 else
                 {
-                    //Status = cls.insertKaryawan(sClsKaryawan);
-                    if (!Status)
+                    StatusValid = cls.validKaryawan(sClsKaryawan);
+                    if (!StatusValid)
                     {
-                        Remarks = "Data Karyawan gagal disimpan";
+                        Status = cls.insertKaryawan(sClsKaryawan);
+                        if (!Status)
+                        {
+                            Remarks = "Data Karyawan gagal disimpan";
+                        }
+                        else
+                        {
+                            Remarks = "Data Karyawan berhasil disimpan";
+                        }
                     }
                     else
                     {
-                        Remarks = "Data Karyawan berhasil disimpan";
+                        Status = cls.updateKaryawan(sClsKaryawan);
+                        if (!Status)
+                        {
+                            Remarks = "Data Karyawan gagal dirubah";
+                        }
+                        else
+                        {
+                            Remarks = "Data Karyawan berhasil dirubah";
+                        }
                     }
                 }
             }

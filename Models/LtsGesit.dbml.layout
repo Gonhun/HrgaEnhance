@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LtsGesit">
+  <DataContextMoniker Name="/LtsGesitDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b239ab31-3854-497b-9718-2f05f2165d9d" absoluteBounds="0.75, 0.75, 2, 6.1938297526041666">
+      <DataClassMoniker Name="/LtsGesitDataContext/VW_TRAVEL_REQUEST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e718e49-a9e2-434c-8297-00a4aada2ea1" absoluteBounds="0.765, 1.21, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb6b006c-77dc-453d-ad08-da828d7eba0c" absoluteBounds="3.75, 0.75, 2, 6.0015283203124987">
+      <DataClassMoniker Name="/LtsGesitDataContext/TBL_T_TRAVEL_REQUEST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9a3bd11b-ef81-4ea1-8d2e-5fe9ab10d8e2" absoluteBounds="3.7649999999999997, 1.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
